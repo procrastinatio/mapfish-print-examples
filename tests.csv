@@ -1,0 +1,22 @@
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+filename,wmts,vector,qrcode,pdf,java_errors,remarks
+wmts_varnish_only,v,,v,ok,no,ok
+wmts_cf_only,cf,,v,yes,handshake_failure on cf,missing tiles (handshalke_errors)
+marker_cf_only,,cf,v,yes,no,missing marker
+marker_v_only,,v,v,yes,no,ok
+marker_ext_only,,ext,v,yes,no,ok
+marker_alt_only,,alt,v,yes,no,ok
+wmts_varnish_vector_cf,v,cf,v,ok,handshake_failure on cf,missing marker or sometimes broken pdf
+wmts_varnish_vector_varnish,v,v,v,ok,no,ok
+wmts_varnish_vector_alt,v,alt,v,ok,no,ok
+wmts_varnish_vector_external,v,ext,v,ok,no,ok
+wmts_varnish_vector_cf_qr_ext,v,cf,ext,ok,no,missing marker
