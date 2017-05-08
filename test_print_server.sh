@@ -46,12 +46,10 @@ urlencode() {
 function init() {
     local dir
     
-    
-    
-    for dir in local remote; do
-        echo "pdfs/${dir}"
-        if [ ! -d "pdfs/${dir}" ]; then
-             mkdir -p "pdfs/${dir}"
+    for dir in "pdfs/local" "pdfs/remote" logs; do
+        echo "${dir}"
+        if [ ! -d "${dir}" ]; then
+             mkdir -p "${dir}"
         fi
     done
 }
@@ -69,24 +67,21 @@ function clean() {
 function print_spec() {
     local specfile=$1
     if [ -f "specs/${specfile}.json" ]; then
-
-    cat $HOME/print-examples/specs/${specfile}.json | jq '.'
+        cat specs/${specfile}.json | jq '.'
     else
         echo "Cannot find the spec file"
         exit 4
-
-fi
-
+    fi
 }
 
 function local_print() {
     local specfile=$1
     
-    java -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/print-standalone-2.1-SNAPSHOT.jar  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=$HOME/print-examples/specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+    java -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/print-standalone-2.1-SNAPSHOT.jar  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
     
-    return print_return_code
+    return $print_return_code
 }
 
 
@@ -110,34 +105,26 @@ else
 fi
 
 
-
-
-
-
-
-
-
 case "${action}" in
 
 
 local) echo "Doing a local print"
-       print_spec ${specfile}
-       clean local ${specfile}
-       local_print ${specfile}
-      ;;
+    print_spec ${specfile}
+    clean local ${specfile}
+    local_print ${specfile}
+    ;;
 
 remote) echo "Doing a remote print"
-print_spec ${specfile}
-   clean remote ${specfile}
-   json=$(remote_print  ${specfile})
+    print_spec ${specfile}
+    clean remote ${specfile}
+    json=$(remote_print  ${specfile})
    
-   pdf_url=$(echo ${json} | jq -r '.getURL')
+    pdf_url=$(echo ${json} | jq -r '.getURL')
    
-   echo $pdf_url
+    echo $pdf_url
    
-   
-   curl -o "pdfs/remote/${specfile}.pdf" ${pdf_url}
-   ;;
+    curl -o "pdfs/remote/${specfile}.pdf" ${pdf_url}
+    ;;
    
 *) echo "Unkown action. Should be one of local,remote"
    exit 2
