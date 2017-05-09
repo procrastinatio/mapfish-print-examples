@@ -15,7 +15,8 @@ declare -a urls=(
                "https://wmts108.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/21781/17/7/8.jpeg"
                "https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/21781/17/7/6.jpeg"
                'https://www.procrastinatio.org/tmp/qrcode.png'
-               'https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers_opacity%3D0.75%26X%3D127456.30%26Y%3D501379.81%26zoom%3D6'
+               'https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers_opacity%3D0.75%26X%3D127456.30%26Y%3D501379.81%26zoom%3D6',
+               'https://api.geo.admin.ch/color/255,165,0/heart-24@2x.png'
                ) 
                
 

@@ -30,7 +30,9 @@ resources = {
         'cf': 'https://map.geo.admin.ch/master/688362f/1704261351/1704261351/img/marker.png',
         'v': 'https://mf-geoadmin3.prod.bgdi.ch/master/688362f/1704261351/1704261351/img/marker.png',
         'ext': 'https://www.procrastinatio.org/assets/lib/leaflet/images/marker.png',
-        'alt': 'https://dfa30utos8zzp.cloudfront.net/1455526563/img/marker.png'},
+        'alt': 'https://dfa30utos8zzp.cloudfront.net/1455526563/img/marker.png',
+        'wc': 'https://api.geo.admin.ch/color/255,165,0/heart-24@2x.png'
+    },
     
     'qr': {
         'v': 'https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers_opacity%3D0.75%26X%3D127456.30%26Y%3D501379.81%26zoom%3D6',
