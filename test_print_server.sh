@@ -3,6 +3,13 @@
 
 HOST=https://print.geo.admin.ch
 
+HOST=https://service-print.dev.bgdi.ch
+
+HOST=https://service-print.int.bgdi.ch/mom_cf_fix
+
+
+
+MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 
 
 PRINT=printmulti
@@ -46,7 +53,7 @@ urlencode() {
 function init() {
     local dir
     
-    for dir in "pdfs/local" "pdfs/remote" logs; do
+    for dir in "pdfs/local" "pdfs/remote" "pdfs/gradle" logs; do
         echo "${dir}"
         if [ ! -d "${dir}" ]; then
              mkdir -p "${dir}"
@@ -73,13 +80,35 @@ function print_spec() {
         exit 4
     fi
 }
+function debug_print() {
+    local specfile=$1
+    
+    java -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2 -Dhttps.protocols=TLSv1.1,TLSv1.2 -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -Ddeployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+
+    print_return_code=$?
+    
+    return $print_return_code
+}
 
 function local_print() {
     local specfile=$1
     
-    java -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/print-standalone-2.1-SNAPSHOT.jar  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+    java -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
+    
+    return $print_return_code
+}
+
+function gradle_print() {
+    local specfile=$1
+    
+    cd ../mapfish-print
+     ./gradlew run  -Dconfig=$HOME/service-print/tomcat/config.yaml -Dspec=specs/${specfile}.json  -Doutput=pdfs/gradle/${specfile}.pdf | tee logs/${specfile}.log
+
+    print_return_code=$?
+
+    cd -
     
     return $print_return_code
 }
@@ -88,7 +117,7 @@ function local_print() {
 function remote_print() {
     local specfile=$1
     local json
-    json=$(curl --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
+    json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
     
     echo ${json}
 
@@ -112,6 +141,18 @@ local) echo "Doing a local print"
     print_spec ${specfile}
     clean local ${specfile}
     local_print ${specfile}
+    ;;
+
+gradle) echo "Doing a gradle print"
+    print_spec ${specfile}
+    clean gradle ${specfile}
+    gradle_print ${specfile}
+    ;;
+
+debug) echo "Doing a debug print"
+    print_spec ${specfile}
+    clean debug ${specfile}
+    debug_print ${specfile}
     ;;
 
 remote) echo "Doing a remote print"
