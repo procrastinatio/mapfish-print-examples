@@ -38,3 +38,6 @@ PDF has been generated and downloded to
     -rw-rw-r-- 1 marco marco 253 mai 11 09:00 simple.pdf
 
 
+## Run all scripts
+
+     $ for f in $(ls specs); do $(./test_print_server.sh remote   ${f%%.*}); done
