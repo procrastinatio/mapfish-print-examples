@@ -1,15 +1,16 @@
 #!/bin/bash
 
 
-HOST=https://print.geo.admin.ch
+DEFAULT_HOST=https://print.geo.admin.ch
 
-HOST=https://service-print.int.bgdi.ch
+DEFAULT_HOST=https://service-print.dev.bgdi.ch
 
 # HOST=https://service-print.int.bgdi.ch/mom_cf_fix
 
 
 HOST_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
 
+HOST=${HOST:-${DEFAULT_HOST}}
 
 
 MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
@@ -33,6 +34,10 @@ function usage(){
     echo "Testing a spec file against the mapfish print server"
     echo
     echo "test_print <locate|remote> <spec file>"
+    echo "HOST=${HOST}"
+    echo "MAPFISH_PRINT=${MAPFISH_PRINT}"
+    echo "PRINT=${PRINT}"
+    echo
     echo "Possible spec files (in 'specs' directory):"
     json_files
 
