@@ -3,9 +3,12 @@
 
 HOST=https://print.geo.admin.ch
 
-HOST=https://service-print.dev.bgdi.ch
+HOST=https://service-print.int.bgdi.ch
 
-HOST=https://service-print.int.bgdi.ch/mom_cf_fix
+# HOST=https://service-print.int.bgdi.ch/mom_cf_fix
+
+
+HOST_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
 
 
 
@@ -53,7 +56,7 @@ urlencode() {
 function init() {
     local dir
     
-    for dir in "pdfs/local" "pdfs/remote" "pdfs/gradle" logs; do
+    for dir in "pdfs/local" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
         echo "${dir}"
         if [ ! -d "${dir}" ]; then
              mkdir -p "${dir}"
@@ -93,7 +96,7 @@ function debug_print() {
 function local_print() {
     local specfile=$1
     
-    java -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+    java -Djava.awt.headless=true  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
     
@@ -116,6 +119,7 @@ function gradle_print() {
 
 function remote_print() {
     local specfile=$1
+    local url=$2
     local json
     json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
     
@@ -158,13 +162,24 @@ debug) echo "Doing a debug print"
 remote) echo "Doing a remote print"
     print_spec ${specfile}
     clean remote ${specfile}
-    json=$(remote_print  ${specfile})
+    json=$(remote_print  ${specfile} ${HOST})
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
    
     echo $pdf_url
    
     curl -o "pdfs/remote/${specfile}.pdf" ${pdf_url}
+    ;;
+fixed) echo "Doing a remote print on fixed"
+    print_spec ${specfile}
+    clean remote ${specfile}
+    json=$(remote_print  ${specfile} ${HOST_FIXED})
+   
+    pdf_url=$(echo ${json} | jq -r '.getURL')
+   
+    echo $pdf_url
+   
+    curl -o "pdfs/fixed/${specfile}.pdf" ${pdf_url}
     ;;
    
 *) echo "Unkown action. Should be one of local,remote"
