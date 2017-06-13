@@ -3,7 +3,7 @@
 
 DEFAULT_HOST=https://print.geo.admin.ch
 
-DEFAULT_HOST=https://service-print.dev.bgdi.ch
+# DEFAULT_HOST=https://service-print.dev.bgdi.ch
 
 # HOST=https://service-print.int.bgdi.ch/mom_cf_fix
 
