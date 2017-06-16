@@ -91,7 +91,8 @@ function print_spec() {
 function debug_print() {
     local specfile=$1
     
-    java -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2 -Dhttps.protocols=TLSv1.1,TLSv1.2 -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -Ddeployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+    #java -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2 -Dhttps.protocols=TLSv1.1,TLSv1.2 -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -Ddeployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/debug/${specfile}.pdf | tee logs/${specfile}.log
+    java -Djava.awt.headless=true  -Djavax.net.debug=all  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/debug/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
     
