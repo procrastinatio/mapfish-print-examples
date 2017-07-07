@@ -1,0 +1,234 @@
+{
+    "layout": "1 A4 landscape",
+    "srs": "EPSG:2056",
+    "units": "m",
+    "rotation": 0,
+    "app": "config",
+    "lang": "de",
+    "dpi": "150",
+    "layers": [{
+        "opa": 1,
+        "type": "WMTS",
+        "layer": "ch.swisstopo.swissimage",
+         "baseURL": "http://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/%7BTIME%7D/%7BTileMatrixSet%7D/%7BTileMatrix%7D/%7BTileCol%7D/%7BTileRow%7D.jpeg",
+        "maxExtent": [2420000, 30000, 900000, 1350000],
+        "tileSize": [256, 256],
+        "resolutions": [4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250, 2000, 1750, 1500, 1250, 1000, 750, 650, 500, 250, 100, 50, 20, 10, 5, 2.5, 2, 1.5, 1, 0.5, 0.25, 0.09999999999999999, 0.049999999999999996],
+        "zoomOffset": 0,
+        "version": "1.0.0",
+        "requestEncoding": "REST",
+        "formatSuffix": "jpeg",
+        "style": "default",
+        "dimensions": ["TIME"],
+        "params": {"TIME": "current"
+                   },
+        "matrixSet": "2056",
+        "matrixIds": 
+                   [{
+                       "identifier": "0",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 14285750.5715,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 4000
+                   }, {
+                       "identifier": "1",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 13392891.1608,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 3750
+                   }, {
+                       "identifier": "2",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 12500031.7501,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 3500
+                   }, {
+                       "identifier": "3",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 11607172.3393,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 3250
+                   }, {
+                       "identifier": "4",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 10714312.9286,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 3000
+                   }, {
+                       "identifier": "5",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 9821453.51791,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 2750
+                   }, {
+                       "identifier": "6",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 8928594.10719,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 2500
+                   }, {
+                       "identifier": "7",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 8035734.69647,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 2250
+                   }, {
+                       "identifier": "8",
+                       "matrixSize": [1, 1],
+                       "scaleDenominator": 7142875.28575,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 2000
+                   }, {
+                       "identifier": "9",
+                       "matrixSize": [2, 1],
+                       "scaleDenominator": 6250015.87503,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 1750
+                   }, {
+                       "identifier": "10",
+                       "matrixSize": [2, 1],
+                       "scaleDenominator": 5357156.46431,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 1500
+                   }, {
+                       "identifier": "11",
+                       "matrixSize": [2, 1],
+                       "scaleDenominator": 4464297.05359,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 1250
+                   }, {
+                       "identifier": "12",
+                       "matrixSize": [2, 2],
+                       "scaleDenominator": 3571437.64288,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 1000
+                   }, {
+                       "identifier": "13",
+                       "matrixSize": [3, 2],
+                       "scaleDenominator": 2678578.23216,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 750
+                   }, {
+                       "identifier": "14",
+                       "matrixSize": [3, 2],
+                       "scaleDenominator": 2321434.46787,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 650
+                   }, {
+                       "identifier": "15",
+                       "matrixSize": [4, 3],
+                       "scaleDenominator": 1785718.82144,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 500
+                   }, {
+                       "identifier": "16",
+                       "matrixSize": [8, 5],
+                       "scaleDenominator": 892859.410719,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 250
+                   }, {
+                       "identifier": "17",
+                       "matrixSize": [19, 13],
+                       "scaleDenominator": 357143.764288,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 100
+                   }, {
+                       "identifier": "18",
+                       "matrixSize": [38, 25],
+                       "scaleDenominator": 178571.882144,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 50
+                   }, {
+                       "identifier": "19",
+                       "matrixSize": [94, 63],
+                       "scaleDenominator": 71428.7528575,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 20
+                   }, {
+                       "identifier": "20",
+                       "matrixSize": [188, 125],
+                       "scaleDenominator": 35714.3764288,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 10
+                   }, {
+                       "identifier": "21",
+                       "matrixSize": [375, 250],
+                       "scaleDenominator": 17857.1882144,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 5
+                   }, {
+                       "identifier": "22",
+                       "matrixSize": [750, 500],
+                       "scaleDenominator": 8928.59410719,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 2.5
+                   }, {
+                       "identifier": "23",
+                       "matrixSize": [938, 625],
+                       "scaleDenominator": 7142.87528575,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 2
+                   }, {
+                       "identifier": "24",
+                       "matrixSize": [1250, 834],
+                       "scaleDenominator": 5357.15646431,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 1.5
+                   }, {
+                       "identifier": "25",
+                       "matrixSize": [1875, 1250],
+                       "scaleDenominator": 3571.43764288,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 1
+                   }, {
+                       "identifier": "26",
+                       "matrixSize": [3750, 2500],
+                       "scaleDenominator": 1785.71882144,
+                       "tileSize": [256, 256],
+                       "topLeftCorner": [2420000, 1350000],
+                       "resolution": 0.5
+                   }]
+
+    }],
+    "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2Findex.html%3FbgLayer%3Dch.swisstopo.swissimage%26lang%3Dde%26topic%3Dech%26X%3D170695.03%26Y%3D631797.93%26zoom%3D6%26layers%3DWMTS%257C%257Casitvd.fond_pourortho%257C%257Chttps%3A%252F%252Fows.asitvd.ch%252Fwmts%252F1.0.0%252FWMTSCapabilities.xml%253FSERVICE%253DWMS%2526REQUEST%253DGetCapabilities%2526VERSION%253D1.3.0",
+    "movie": false,
+    "pages": [{
+        "center": [2631797.9315125805, 1170695.02922841636],
+        "bbox": [2628261.3342903582, 1168357.87645063858, 2635334.5287348027, 1173032.18200619414],
+        "display": [802, 530],
+        "scale": "25000.0",
+        "dataOwner": "© CNES, Spot Image, swisstopo, NPOC,",
+        "thirdPartyDataOwner": "ows.asitvd.ch",
+        "shortLink": "https://s.geo.admin.ch/73cd17359f",
+        "rotation": 0,
+        "langde": true,
+        "timestamp": ""
+    }]
+    
+}
