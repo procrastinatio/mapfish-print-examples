@@ -1,0 +1,154 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:21781",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "layer": "ch.swisstopo.pixelkarte-farbe",
+      "opacity": 1,
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "21781",
+      "baseURL": "https://wmts.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        420000,
+        350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5
+      ],
+      "maxExtent": [
+        420000,
+        30000,
+        900000,
+        350000
+      ]
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {
+        "2": {
+          "id": 2,
+          "rotation": 0,
+          "externalGraphic": "https://api3.geo.admin.ch/color/255,0,0/marker-24@2x.png",
+          "fillOpacity": 1,
+          "graphicWidth": 28.8,
+          "graphicHeight": 28.8,
+          "graphicXOffset": -14.4,
+          "graphicYOffset": -25.92,
+          "strokeOpacity": 0,
+          "label": "Evolène",
+          "fontColor": "#ff0000",
+          "fontFamily": "HELVETICA",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "marker_1509969532415",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                604500.0005915565,
+                106500.00078926333,
+                0
+              ]
+            },
+            "properties": {
+              "value": "marker",
+              "type": "marker",
+              "name": "Evolène",
+              "description": "Hier habe ich 2 verschiedene 25'000er Ausschnitte erhalten",
+              "_gx_style": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {},
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": []
+      }
+    }
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2Fmaster%2Fee1dc86%2F1707191017%2Findex.html%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%2CKML%257C%257Chttps%3A%252F%252Fwww.procrastinatio.org%252Ftmp%252Fdruck.kml%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%2Ctrue%26layers_timestamp%3D18641231%2C%2C%2C%2C%26E%3D2604972.50%26N%3D1106530.08%26zoom%3D6%26X%3D107139.05%26Y%3D604366.25",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        604366.2546895705,
+        107139.04681042922
+      ],
+      "bbox": [
+        600829.6574673483,
+        104801.89403265144,
+        607902.8519117928,
+        109476.199588207
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "25000.0",
+      "dataOwner": "© swisstopo,",
+      "thirdPartyDataOwner": "www.procrastinatio.org",
+      "shortLink": "https://s.geo.admin.ch/76c1880975",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}
