@@ -10,6 +10,7 @@ DEFAULT_HOST=https://print.geo.admin.ch
 
 HOST_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
 
+
 HOST=${HOST:-${DEFAULT_HOST}}
 
 
@@ -18,6 +19,7 @@ MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 
 PRINT=printmulti
 PRINT=print
+#PRINT=pdf  # for tomcat
 
 
 function json_files {
@@ -33,7 +35,7 @@ function usage(){
 
     echo "Testing a spec file against the mapfish print server"
     echo
-    echo "test_print <locate|remote> <spec file>"
+    echo "test_print <local|tomcat|remote> <spec file>"
     echo "HOST=${HOST}"
     echo "MAPFISH_PRINT=${MAPFISH_PRINT}"
     echo "PRINT=${PRINT}"
@@ -61,7 +63,7 @@ urlencode() {
 function init() {
     local dir
     
-    for dir in "pdfs/local" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
+    for dir in "pdfs/local" "pdfs/tomcat" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
         echo "${dir}"
         if [ ! -d "${dir}" ]; then
              mkdir -p "${dir}"
@@ -122,12 +124,14 @@ function gradle_print() {
     return $print_return_code
 }
 
-
 function remote_print() {
     local specfile=$1
     local url=$2
     local json
-    json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
+    #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
+    json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" \
+           --header "Referer: http://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --data @specs/${specfile}.json \
+           -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
 
@@ -165,6 +169,21 @@ debug) echo "Doing a debug print"
     debug_print ${specfile}
     ;;
 
+tomcat)
+    tomcat_url=http://localhost:8009/service-print-main/pdf
+    echo "Doing a local print on tomcat ${tomcat_url} (not for multiprint)"
+    print_spec ${specfile}
+    clean remote ${specfile}
+    json=$(remote_print  ${specfile} ${tomcat_url})
+   
+    pdf_url=$(echo ${json} | jq -r '.getURL')
+   
+    echo $pdf_url
+    sleep 0.5
+   
+    curl -o "pdfs/tomcat/${specfile}.pdf" ${pdf_url}
+    ;;
+
 remote) echo "Doing a remote print"
     print_spec ${specfile}
     clean remote ${specfile}
@@ -173,9 +192,12 @@ remote) echo "Doing a remote print"
     pdf_url=$(echo ${json} | jq -r '.getURL')
    
     echo $pdf_url
+
+    sleep 0.5
    
     curl -o "pdfs/remote/${specfile}.pdf" ${pdf_url}
     ;;
+
 fixed) echo "Doing a remote print on fixed"
     print_spec ${specfile}
     clean remote ${specfile}
