@@ -1,0 +1,99 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "layer": "ch.swisstopo.geologie-tektonische_karte",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "20080522"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://tod.dev.bgdi.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    }
+  ],
+  "qrcodeurl": "https://mf-chsdi3.dev.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.dev.bgdi.ch%2Fsrc%2F%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Dfr%26topic%3Dech%26bgLayer%3DvoidLayer%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%2Cch.swisstopo.geologie-tektonische_karte%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%2Ctrue%26layers_timestamp%3D18641231%2C%2C%2C%2C%26E%3D2611917.46%26N%3D1171653.10%26zoom%3D1",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2611917.46,
+        1171653.1
+      ],
+      "bbox": [
+        2470453.571111111,
+        1078166.988888889,
+        2753381.348888889,
+        1265139.211111111
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "1000000.0",
+      "dataOwner": " swisstopo",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://mf-chsdi3.dev.bgdi.ch/76cb11969b",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}
