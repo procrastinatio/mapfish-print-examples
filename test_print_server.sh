@@ -1,5 +1,6 @@
 #!/bin/bash
 
+_V=0
 
 DEFAULT_BASEURL=https://print.geo.admin.ch
 
@@ -24,6 +25,15 @@ MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 PRINT=printmulti
 PRINT=print
 #PRINT=pdf  # for tomcat
+
+
+
+
+function log () {
+    if [[ $_V -eq 1 ]]; then
+        echo "$@"
+    fi
+}
 
 
 function json_files {
@@ -51,6 +61,8 @@ function usage(){
 }
 
 
+
+
 urlencode() {
     # urlencode <string>
 
@@ -69,7 +81,7 @@ function init() {
     local dir
     
     for dir in "pdfs/local" "pdfs/tomcat" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
-        echo "${dir}"
+        #echo "${dir}"
         if [ ! -d "${dir}" ]; then
              mkdir -p "${dir}"
         fi
@@ -142,6 +154,17 @@ function remote_print() {
 
 }
 
+function preflight() {
+    local action=$1
+    local specfile=$2
+    
+    spec=$(print_spec ${specfile})
+    log $spec
+    clean ${action} ${specfile}
+
+}
+
+
 
 if (( $# < 2 )); then
     usage
@@ -157,28 +180,28 @@ case "${action}" in
 
 
 local) echo "Doing a local print"
-    print_spec ${specfile}
-    clean local ${specfile}
+
+    preflight local ${specfile}
     local_print ${specfile}
     ;;
 
 gradle) echo "Doing a gradle print"
-    print_spec ${specfile}
-    clean gradle ${specfile}
+
+    preflight gradle ${specfile}
     gradle_print ${specfile}
     ;;
 
 debug) echo "Doing a debug print"
-    print_spec ${specfile}
-    clean debug ${specfile}
+
+    preflight debug ${specfile}
     debug_print ${specfile}
     ;;
 
 tomcat)
     tomcat_url=http://localhost:8009/service-print-main/pdf
     echo "Doing a local print on tomcat ${tomcat_url} (not for multiprint)"
-    print_spec ${specfile}
-    clean remote ${specfile}
+
+    preflight remote ${specfile}
     json=$(remote_print  ${specfile} ${tomcat_url})
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
@@ -190,22 +213,67 @@ tomcat)
     ;;
 
 remote) echo "Doing a remote print"
-    print_spec ${specfile}
-    clean remote ${specfile}
-    json=$(remote_print  ${specfile} ${BASEURL}/print)
-   
+
+    preflight remote ${specfile}
+     
+    movie=$(cat specs/${specfile}.json  | jq '.movie')
+    
+    if [ "${movie}" == "true" ]; then
+       PRINT=printmulti
+    else
+      PRINT=print
+    fi
+    # Multiprint
+    if [ "${movie}" == "true" ]; then
+     
+        done="ongoing"
+     
+        #{"idToCheck":"1711102228415808"}
+      
+        first=$(remote_print  ${specfile} ${BASEURL}/${PRINT})
+      
+        #  {"status":"done","getURL":"https://service-print.prod.bgdi.ch/print/-multi1711102035267851.pdf.printout","written":109884753}
+     
+        idToCheck=$(echo ${first} | jq -r '.idToCheck')
+        echo "idToCheck=$idToCheck"
+     
+        # {"status":"ongoing","total":23,"done":0}
+     
+        while [[ "${status}" != "done" ]]; 
+           do sleep 5; 
+           json=$(curl -s  "${BASEURL}/printprogress?id=$idToCheck")
+           echo $json
+           status=$(echo $json | jq -r '.status')
+           echo "waiting  $json $status" [[ "${status}" != "done" ]]  && echo not-equal || echo equal
+        
+       done
+
+    # simple
+    else
+        json=$(remote_print  ${specfile} ${BASEURL}/${PRINT})
+    fi
+    
+    # Get the PDF 
     pdf_url=$(echo ${json} | jq -r '.getURL')
    
-    echo $pdf_url
+    echo "#### $pdf_url ####"
 
     sleep 0.5
+    
+    pdf_file="pdfs/remote/${specfile}.pdf"
    
-    curl -o "pdfs/remote/${specfile}.pdf" ${pdf_url}
+    curl -s -o ${pdf_file} ${pdf_url}
+    
+    echo "Dowloaded to: ${pdf_file}"
+    echo
+    echo $(file ${pdf_file})
+    
+    echo $PRINT
     ;;
 
 fixed) echo "Doing a remote print on fixed"
-    print_spec ${specfile}
-    clean remote ${specfile}
+
+    preflight remote ${specfile}
     json=$(remote_print  ${specfile} ${BASEURL_FIXED})
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
