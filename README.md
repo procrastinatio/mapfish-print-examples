@@ -37,6 +37,13 @@ PDF has been generated and downloded to
     -rw-rw-r-- 1 marco marco 253 mai  9 18:19 marker_wc_only.pdf
     -rw-rw-r-- 1 marco marco 253 mai 11 09:00 simple.pdf
 
+## Using custom host
+
+
+     HOST=service-print.dev.bgdi.ch BASEURL=http://10.220.4.120:9090  ./test_print_server.sh remote  lv95-wmts-simplified-protocol
+
+
+
 
 ## Run all scripts
 

@@ -1,15 +1,19 @@
 #!/bin/bash
 
 
-DEFAULT_HOST=https://print.geo.admin.ch
+DEFAULT_BASEURL=https://print.geo.admin.ch
 
-# DEFAULT_HOST=https://service-print.dev.bgdi.ch
+# DEFAULT_BASEURL=https://service-print.dev.bgdi.ch
 
-# HOST=https://service-print.int.bgdi.ch/mom_cf_fix
+# BASEURL=https://service-print.int.bgdi.ch/mom_cf_fix
 
 
-HOST_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
+BASEURL_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
 
+
+BASEURL=${BASEURL:-${DEFAULT_BASEURL}}
+
+DEFAULT_HOST=$(echo ${BASEURL} | sed -e "s/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/")
 
 HOST=${HOST:-${DEFAULT_HOST}}
 
@@ -36,6 +40,7 @@ function usage(){
     echo "Testing a spec file against the mapfish print server"
     echo
     echo "test_print <local|tomcat|remote> <spec file>"
+    echo "BASEURL=${BASEURL}"
     echo "HOST=${HOST}"
     echo "MAPFISH_PRINT=${MAPFISH_PRINT}"
     echo "PRINT=${PRINT}"
@@ -128,9 +133,9 @@ function remote_print() {
     local specfile=$1
     local url=$2
     local json
-    #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
+    #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
     json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" \
-           --header "Referer: http://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --data @specs/${specfile}.json \
+           --header "Referer: http://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
            -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
@@ -187,7 +192,7 @@ tomcat)
 remote) echo "Doing a remote print"
     print_spec ${specfile}
     clean remote ${specfile}
-    json=$(remote_print  ${specfile} ${HOST})
+    json=$(remote_print  ${specfile} ${BASEURL}/print)
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
    
@@ -201,7 +206,7 @@ remote) echo "Doing a remote print"
 fixed) echo "Doing a remote print on fixed"
     print_spec ${specfile}
     clean remote ${specfile}
-    json=$(remote_print  ${specfile} ${HOST_FIXED})
+    json=$(remote_print  ${specfile} ${BASEURL_FIXED})
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
    
