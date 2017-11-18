@@ -146,7 +146,7 @@ function remote_print() {
     local url=$2
     local json
     #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
-    json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" \
+    json=$(curl -v --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
            --header "Referer: http://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
            -X POST "${url}/create.json?url=$(urlencode ${url})")
     
@@ -219,6 +219,7 @@ remote) echo "Doing a remote print"
     movie=$(cat specs/${specfile}.json  | jq '.movie')
     
     if [ "${movie}" == "true" ]; then
+       echo "Movie mode"
        PRINT=printmulti
     else
       PRINT=print
