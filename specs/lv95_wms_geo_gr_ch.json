@@ -12,10 +12,10 @@
       "type": "WMS",
       "baseURL": "https://wms.geo.gr.ch/gewaesserschutz",
       "layers": [
-        "Gewaesserschutzbereich_Au,Grundwasserschutzzonen"
+        "Gewaesserschutzbereich_Au"
       ],  
       "styles": [
-        "",""
+        ""
       ],  
       "format": "image/png",
       "customParams": {
