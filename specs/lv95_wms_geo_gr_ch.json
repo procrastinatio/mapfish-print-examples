@@ -1,1 +1,37 @@
-{"layout":"1 A4 landscape","srs":"EPSG:2056","units":"m","rotation":0,"app":"config","lang":"fr","dpi":"150","layers":[],"qrcodeurl":"https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2780152.98%26N%3D1166980.10%26zoom%3D5%26layers%3DWMS%257C%257CSiegfriedkarte%257C%257Chttp%3A%252F%252Fwms.geo.gr.ch%252Fhistorischekarten%253F%257C%257CSiegfriedkarte%257C%257C1.3.0%257C%257Ctrue","movie":false,"pages":[{"center":[2780152.9841360636,1166980.0974750458],"bbox":[2773079.789691619,1162305.7919194903,2787226.178580508,1171654.4030306013],"display":[802,530],"scale":"50000.0","dataOwner":"","thirdPartyDataOwner":"","shortLink":"https://s.geo.admin.ch/772f82fdc9","rotation":0,"langfr":true,"timestamp":""}]}
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [],
+  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2762217.82%26N%3D1204118.86%26zoom%3D5%26layers%3DKML%257C%257Chttps%3A%252F%252Fwww.procrastinatio.org%252Fkml%252Fbln-style.kmz%2CWMS%257C%257CTransmissivit%25C3%25A4t%257C%257Chttp%3A%252F%252Fmap.geo.gr.ch%252Fwms%252Fgrundwasser%253F%257C%257CTransmissivitaet%257C%257C1.3.0%257C%257Ctrue%2CWMS%257C%257CHinweistext%257C%257Chttp%3A%252F%252Fmap.geo.gr.ch%252Fwms%252Fgrundwasser%253F%257C%257CHinweistext%257C%257C1.3.0%257C%257Ctrue%2CWMS%257C%257CBeschriftung%2520Grundwasser%2520Hochstand%257C%257Chttp%3A%252F%252Fmap.geo.gr.ch%252Fwms%252Fgrundwasser%253F%257C%257CBeschriftung_Grundwasser_Hochstand%257C%257C1.3.0%257C%257Ctrue%2CWMS%257C%257CBeschriftung%2520Grundwasser%2520Normalstand%257C%257Chttp%3A%252F%252Fmap.geo.gr.ch%252Fwms%252Fgrundwasser%253F%257C%257CBeschriftung_Grundwasser_Normalstand%257C%257C1.3.0%257C%257Ctrue%26layers_visibility%3Dfalse%2Ctrue%2Ctrue%2Ctrue%2Ctrue",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2762217.819638948,
+        1204118.8571518082
+      ],
+      "bbox": [
+        2755144.6251945035,
+        1199444.5515962527,
+        2769291.0140833925,
+        1208793.1627073637
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "50000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733dbbb07",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}

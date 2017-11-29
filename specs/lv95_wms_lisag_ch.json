@@ -10,9 +10,9 @@
     {
       "opacity": 1,
       "type": "WMS",
-      "baseURL": "https://wfs.geodienste.ch/av/deu?",
+      "baseURL": "https://service.lisag.ch/ows?SERVICE=WMS&",
       "layers": [
-        "Bodenbedeckung"
+        "raumplanung:gewaesserschutzbereiche_overview"
       ],
       "styles": [
         ""
@@ -37,28 +37,28 @@
       }
     }
   ],
-  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2599809.70%26N%3D1199480.53%26zoom%3D7%26catalogNodes%3D687%26layers%3DWMS%257C%257CBodenbedeckung%257C%257Chttps%3A%252F%252Fwfs.geodienste.ch%252Fav%252Fdeu%253F%257C%257CBodenbedeckung%257C%257C1.3.0",
+  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2690491.48%26N%3D1191079.11%26zoom%3D5%26layers%3DWMS%257C%257Cgewaesserschutzbereiche_overview%257C%257Chttps%3A%252F%252Fservice.lisag.ch%252Fows%253FSERVICE%253DWMS%2526%257C%257Craumplanung%3Agewaesserschutzbereiche_overview%257C%257C1.3.0",
   "movie": false,
   "pages": [
     {
       "center": [
-        2599809.6950042862,
-        1199480.530645637
+        2690491.4761557016,
+        1191079.1065062992
       ],
       "bbox": [
-        2598395.0561153973,
-        1198545.669534526,
-        2601224.3338931752,
-        1200415.391756748
+        2683418.281711257,
+        1186404.8009507437,
+        2697564.670600146,
+        1195753.4120618547
       ],
       "display": [
         802,
         530
       ],
-      "scale": "10000.0",
+      "scale": "50000.0",
       "dataOwner": "",
-      "thirdPartyDataOwner": "© wfs.geodienste.ch",
-      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733f667ce",
+      "thirdPartyDataOwner": "© service.lisag.ch",
+      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733f1c420",
       "rotation": 0,
       "langen": true,
       "timestamp": ""
