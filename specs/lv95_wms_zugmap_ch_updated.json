@@ -1,0 +1,57 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "https://maps.zg.ch/basisplan_farbig/service.svc/get?",
+      "layers": [
+        "Basisplan_farbig"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "application/vnd.ogc.se_xml",
+        "TRANSPARENT": "true",
+        "VERSION": "1.3.0",
+        "CRS": "EPSG:2056"
+      },
+      "singleTile": false
+    }
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.dev.bgdi.ch%2Fltmom%2Fsrc%2F%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2681439.18%26N%3D1225496.46%26zoom%3D9%26layers%3DWMS%257C%257C2000-Watt%2520Sites%257C%257Chttps%3A%252F%252Fwms.geo.admin.ch%252F%253F%257C%257Cch.bfe.energiestaedte-2000watt-areale%257C%257C1.3.0%2CWMS%257C%257CBasiskarten%2520Landschaftsmodelle%257C%257Chttp%3A%252F%252Fwms.geo.gl.ch%252F%253F%257C%257CBasiskarten%2520Landschaftsmodelle%257C%257C1.3.0%2CWMS%257C%257CBasisplan_farbig%257C%257Chttps%3A%252F%252Fmaps.zg.ch%252Fbasisplan_farbig%252Fservice.svc%252Fget%253F%257C%257CBasisplan_farbig%257C%257C1.3.0%26catalogNodes%3D687%26layers_visibility%3Dfalse%2Ctrue%2Ctrue",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2681439.1799999992,
+        1225496.4599999997
+      ],
+      "bbox": [
+        2680731.8605555547,
+        1225029.0294444442,
+        2682146.4994444437,
+        1225963.8905555552
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "5000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": "© maps.zg.ch",
+      "shortLink": "https://s.geo.admin.ch/77345e1470",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}
