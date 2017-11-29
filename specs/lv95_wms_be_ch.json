@@ -1,1 +1,57 @@
-{"layout":"1 A4 landscape","srs":"EPSG:2056","units":"m","rotation":0,"app":"config","lang":"fr","dpi":"150","layers":[{"opacity":1,"type":"WMS","baseURL":"https://www.geoservice.apps.be.ch/geoservice2/services/a42geo/a42geo_basiswms_d_fk/MapServer/WmsServer?","layers":["GEODB.UP5_SITU5_MOSAIC"],"styles":[""],"format":"image/png","customParams":{"EXCEPTIONS":"XML","TRANSPARENT":"true","CRS":"EPSG:2056","MAP_RESOLUTION":"150"},"singleTile":false},{"opacity":1,"type":"WMS","baseURL":"https://www.geoservice.apps.be.ch/geoservice2/services/a42geo/a42geo_basiswms_d_fk/MapServer/WmsServer?","layers":["GEODB.UP5_SITU5_MOSAIC"],"styles":[""],"format":"image/png","customParams":{"EXCEPTIONS":"XML","TRANSPARENT":"true","CRS":"EPSG:2056","MAP_RESOLUTION":"150"},"singleTile":false}],"qrcodeurl":"https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2600664.29%26N%3D1200573.98%26zoom%3D7%26layers%3DWMS%257C%257CSituation%2520UP5%257C%257Chttps%3A%252F%252Fwww.geoservice.apps.be.ch%252Fgeoservice2%252Fservices%252Fa42geo%252Fa42geo_basiswms_d_fk%252FMapServer%252FWmsServer%253F%257C%257CGEODB.UP5_SITU5_MOSAIC%257C%257C1.3.0%2CWMS%257C%257CSituation%2520UP5%257C%257Chttps%3A%252F%252Fwww.geoservice.apps.be.ch%252Fgeoservice2%252Fservices%252Fa42geo%252Fa42geo_basiswms_d_fk%252FMapServer%252FWmsServer%253F%257C%257CGEODB.UP5_SITU5_MOSAIC%257C%257C1.3.0","movie":false,"pages":[{"center":[2600664.2949965564,1200573.983994327],"bbox":[2599249.6561076674,1199639.122883216,2602078.9338854454,1201508.845105438],"display":[802,530],"scale":"10000.0","dataOwner":"","thirdPartyDataOwner":" www.geoservice.apps.be.ch","shortLink":"https://s.geo.admin.ch/772f8fee3e","rotation":0,"langfr":true,"timestamp":""}]}
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "https://www.geoservice.apps.be.ch/geoservice2/services/a42geo/a42geo_basiswms_d_fk/MapServer/WmsServer?",
+      "layers": [
+        "GEODB.UP5_SITU5_MOSAIC"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    }
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2600664.29%26N%3D1200573.98%26zoom%3D7%26layers%3DWMS%257C%257CSituation%2520UP5%257C%257Chttps%3A%252F%252Fwww.geoservice.apps.be.ch%252Fgeoservice2%252Fservices%252Fa42geo%252Fa42geo_basiswms_d_fk%252FMapServer%252FWmsServer%253F%257C%257CGEODB.UP5_SITU5_MOSAIC%257C%257C1.3.0%2CWMS%257C%257CSituation%2520UP5%257C%257Chttps%3A%252F%252Fwww.geoservice.apps.be.ch%252Fgeoservice2%252Fservices%252Fa42geo%252Fa42geo_basiswms_d_fk%252FMapServer%252FWmsServer%253F%257C%257CGEODB.UP5_SITU5_MOSAIC%257C%257C1.3.0",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2600664.2949965564,
+        1200573.983994327
+      ],
+      "bbox": [
+        2599249.6561076674,
+        1199639.122883216,
+        2602078.9338854454,
+        1201508.845105438
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "10000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": " www.geoservice.apps.be.ch",
+      "shortLink": "https://s.geo.admin.ch/772f8fee3e",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}
