@@ -1,0 +1,58 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "https://www.geoservice.apps.be.ch/geoservice2/services/a42geo/a42geo_basiswms_d_fk/MapServer/WmsServer?",
+      "layers": [
+        "GEODB.UP5_SITU5_MOSAIC"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "MAP_RESOLUTION": "150",
+        "VERSION": "1.3.0",
+        "CRS": "EPSG:2056"
+      },
+      "singleTile": false
+    }
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.dev.bgdi.ch%2Fltmom%2Fsrc%2F%3Flang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%2CWMS%257C%257CSituation%2520UP5%257C%257Chttps%3A%252F%252Fwww.geoservice.apps.be.ch%252Fgeoservice2%252Fservices%252Fa42geo%252Fa42geo_basiswms_d_fk%252FMapServer%252FWmsServer%253F%257C%257CGEODB.UP5_SITU5_MOSAIC%257C%257C1.3.0%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%2Ctrue%26layers_timestamp%3D18641231%2C%2C%2C%2C%26E%3D2599804.50%26N%3D1199609.64%26zoom%3D6",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2599804.5,
+        1199609.6399999997
+      ],
+      "bbox": [
+        2596267.902777778,
+        1197272.487222222,
+        2603341.097222222,
+        1201946.7927777774
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "25000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": " www.geoservice.apps.be.ch",
+      "shortLink": "https://s.geo.admin.ch/773297dab4",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}
