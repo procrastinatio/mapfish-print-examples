@@ -1,0 +1,67 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "https://maps.zg.ch/basisplan_sw/service.svc/get?",
+      "layers": [
+        "Basisplan_sw"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {},
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": []
+      }
+    }
+  ],
+  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2681509.14%26N%3D1225423.66%26zoom%3D7%26layers%3DWMS%257C%257CBasisplan_sw%257C%257Chttps%3A%252F%252Fmaps.zg.ch%252Fbasisplan_sw%252Fservice.svc%252Fget%253F%257C%257CBasisplan_sw%257C%257C1.3.0",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2681509.1372510106,
+        1225423.6590875175
+      ],
+      "bbox": [
+        2680094.4983621216,
+        1224488.7979764065,
+        2682923.7761398996,
+        1226358.5201986285
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "10000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": "© maps.zg.ch",
+      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733f00c95",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}

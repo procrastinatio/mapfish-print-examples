@@ -1,0 +1,489 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "layer": "ch.swisstopo.geologie-tektonische_karte",
+      "type": "WMTS",
+      "baseURL": "https://wmts100.geo.admin.ch/1.0.0/ch.swisstopo.geologie-tektonische_karte/default/%7BTIME%7D/2056/%7BTileMatrix%7D/%7BTileCol%7D/%7BTileRow%7D.png",
+      "matrixIds": [
+        {
+          "identifier": "0",
+          "resolution": 4000,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "1",
+          "resolution": 3750,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "2",
+          "resolution": 3500,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "3",
+          "resolution": 3250,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "4",
+          "resolution": 3000,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "5",
+          "resolution": 2750,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "6",
+          "resolution": 2500,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "7",
+          "resolution": 2250,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "8",
+          "resolution": 2000,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1,
+            2
+          ]
+        },
+        {
+          "identifier": "9",
+          "resolution": 1750,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            2,
+            2
+          ]
+        },
+        {
+          "identifier": "10",
+          "resolution": 1500,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            2,
+            2
+          ]
+        },
+        {
+          "identifier": "11",
+          "resolution": 1250,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            2,
+            2
+          ]
+        },
+        {
+          "identifier": "12",
+          "resolution": 1000,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            2,
+            3
+          ]
+        },
+        {
+          "identifier": "13",
+          "resolution": 750,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            3,
+            3
+          ]
+        },
+        {
+          "identifier": "14",
+          "resolution": 650,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            3,
+            3
+          ]
+        },
+        {
+          "identifier": "15",
+          "resolution": 500,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            4,
+            4
+          ]
+        },
+        {
+          "identifier": "16",
+          "resolution": 250,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            8,
+            6
+          ]
+        },
+        {
+          "identifier": "17",
+          "resolution": 100,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            19,
+            14
+          ]
+        },
+        {
+          "identifier": "18",
+          "resolution": 50,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            38,
+            26
+          ]
+        },
+        {
+          "identifier": "19",
+          "resolution": 20,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            94,
+            64
+          ]
+        },
+        {
+          "identifier": "20",
+          "resolution": 10,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            188,
+            126
+          ]
+        },
+        {
+          "identifier": "21",
+          "resolution": 5,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            376,
+            251
+          ]
+        },
+        {
+          "identifier": "22",
+          "resolution": 2.5,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            751,
+            501
+          ]
+        },
+        {
+          "identifier": "23",
+          "resolution": 2,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            938,
+            626
+          ]
+        },
+        {
+          "identifier": "24",
+          "resolution": 1.5,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1251,
+            835
+          ]
+        },
+        {
+          "identifier": "25",
+          "resolution": 1,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            1876,
+            1251
+          ]
+        },
+        {
+          "identifier": "26",
+          "resolution": 0.5,
+          "topLeftCorner": [
+            2420000,
+            1350000
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "matrixSize": [
+            3751,
+            2501
+          ]
+        }
+      ],
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "20080522"
+      },
+      "matrixSet": "2056"
+    }
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.prod.bgdi.ch%2F%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Dfr%26topic%3Dech%26bgLayer%3DvoidLayer%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%2Cch.swisstopo.geologie-tektonische_karte%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%2Ctrue%26layers_timestamp%3D18641231%2C%2C%2C%2C%26E%3D2611917.46%26N%3D1171653.10%26zoom%3D1",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2611917.46,
+        1171653.0999999994
+      ],
+      "bbox": [
+        2470453.571111111,
+        1078166.9888888884,
+        2753381.348888889,
+        1265139.2111111104
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "1000000.0",
+      "dataOwner": " swisstopo",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://s.geo.admin.ch/76cb0c5c01",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}

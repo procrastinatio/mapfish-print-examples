@@ -1,0 +1,152 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "http://wms.zh.ch/FnsInvZHWMS?",
+      "layers": [
+        "grenzen"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "http://wms.zh.ch/FnsInvZHWMS?",
+      "layers": [
+        "bezirkslabels"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "http://wms.zh.ch/FnsInvZHWMS?",
+      "layers": [
+        "gemeindegrenzen"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "http://wms.zh.ch/FnsInvZHWMS?",
+      "layers": [
+        "geologische-geomorphologische-objekte"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "http://wms.zh.ch/FnsInvZHWMS?",
+      "layers": [
+        "naturschutzobjekte"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "http://wms.zh.ch/FnsInvZHWMS?",
+      "layers": [
+        "landschaftsschutzobjekt-findlinge"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    }
+  ],
+  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2678324.40%26N%3D1240725.37%26zoom%3D6%26layers%3DWMS%257C%257CBezirks-%2520und%2520Kantonsgrenzen%257C%257Chttp%3A%252F%252Fwms.zh.ch%252FFnsInvZHWMS%253F%257C%257Cgrenzen%257C%257C1.3.0%2CWMS%257C%257CBezirkslabels%257C%257Chttp%3A%252F%252Fwms.zh.ch%252FFnsInvZHWMS%253F%257C%257Cbezirkslabels%257C%257C1.3.0%2CWMS%257C%257CGemeindegrenzen%257C%257Chttp%3A%252F%252Fwms.zh.ch%252FFnsInvZHWMS%253F%257C%257Cgemeindegrenzen%257C%257C1.3.0%2CWMS%257C%257CGeologische%2C%2520geomorphologische%2520Objekte%257C%257Chttp%3A%252F%252Fwms.zh.ch%252FFnsInvZHWMS%253F%257C%257Cgeologische-geomorphologische-objekte%257C%257C1.3.0%2CWMS%257C%257CNaturschutzobjekte%257C%257Chttp%3A%252F%252Fwms.zh.ch%252FFnsInvZHWMS%253F%257C%257Cnaturschutzobjekte%257C%257C1.3.0%2CWMS%257C%257CLandschaftsschutzobjekt%2520Findlinge%257C%257Chttp%3A%252F%252Fwms.zh.ch%252FFnsInvZHWMS%253F%257C%257Clandschaftsschutzobjekt-findlinge%257C%257C1.3.0",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2678324.3994714892,
+        1240725.3685505602
+      ],
+      "bbox": [
+        2674787.802249267,
+        1238388.2157727825,
+        2681860.9966937113,
+        1243062.521328338
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "25000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": "© wms.zh.ch",
+      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733ed20eb",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}

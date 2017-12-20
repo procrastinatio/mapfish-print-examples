@@ -1,14 +1,20 @@
 #!/bin/bash
 
+_V=0
 
-DEFAULT_HOST=https://print.geo.admin.ch
+DEFAULT_BASEURL=https://print.geo.admin.ch
 
-# DEFAULT_HOST=https://service-print.dev.bgdi.ch
+# DEFAULT_BASEURL=https://service-print.dev.bgdi.ch
 
-# HOST=https://service-print.int.bgdi.ch/mom_cf_fix
+# BASEURL=https://service-print.int.bgdi.ch/mom_cf_fix
 
 
-HOST_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
+BASEURL_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
+
+
+BASEURL=${BASEURL:-${DEFAULT_BASEURL}}
+
+DEFAULT_HOST=$(echo ${BASEURL} | sed -e "s/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/")
 
 HOST=${HOST:-${DEFAULT_HOST}}
 
@@ -18,6 +24,16 @@ MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 
 PRINT=printmulti
 PRINT=print
+#PRINT=pdf  # for tomcat
+
+
+
+
+function log () {
+    if [[ $_V -eq 1 ]]; then
+        echo "$@"
+    fi
+}
 
 
 function json_files {
@@ -33,7 +49,8 @@ function usage(){
 
     echo "Testing a spec file against the mapfish print server"
     echo
-    echo "test_print <locate|remote> <spec file>"
+    echo "test_print <local|tomcat|remote> <spec file>"
+    echo "BASEURL=${BASEURL}"
     echo "HOST=${HOST}"
     echo "MAPFISH_PRINT=${MAPFISH_PRINT}"
     echo "PRINT=${PRINT}"
@@ -42,6 +59,8 @@ function usage(){
     json_files
 
 }
+
+
 
 
 urlencode() {
@@ -61,8 +80,8 @@ urlencode() {
 function init() {
     local dir
     
-    for dir in "pdfs/local" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
-        echo "${dir}"
+    for dir in "pdfs/local" "pdfs/tomcat" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
+        #echo "${dir}"
         if [ ! -d "${dir}" ]; then
              mkdir -p "${dir}"
         fi
@@ -122,16 +141,29 @@ function gradle_print() {
     return $print_return_code
 }
 
-
 function remote_print() {
     local specfile=$1
     local url=$2
     local json
-    json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${HOST}/${PRINT}/create.json?url=$(urlencode ${HOST}/${PRINT})")
+    #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
+    json=$(curl -v --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
+           --header "Referer: http://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
+           -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
 
 }
+
+function preflight() {
+    local action=$1
+    local specfile=$2
+    
+    spec=$(print_spec ${specfile})
+    log $spec
+    clean ${action} ${specfile}
+
+}
+
 
 
 if (( $# < 2 )); then
@@ -148,38 +180,102 @@ case "${action}" in
 
 
 local) echo "Doing a local print"
-    print_spec ${specfile}
-    clean local ${specfile}
+
+    preflight local ${specfile}
     local_print ${specfile}
     ;;
 
 gradle) echo "Doing a gradle print"
-    print_spec ${specfile}
-    clean gradle ${specfile}
+
+    preflight gradle ${specfile}
     gradle_print ${specfile}
     ;;
 
 debug) echo "Doing a debug print"
-    print_spec ${specfile}
-    clean debug ${specfile}
+
+    preflight debug ${specfile}
     debug_print ${specfile}
     ;;
 
-remote) echo "Doing a remote print"
-    print_spec ${specfile}
-    clean remote ${specfile}
-    json=$(remote_print  ${specfile} ${HOST})
+tomcat)
+    tomcat_url=http://localhost:8009/service-print-main/pdf
+    echo "Doing a local print on tomcat ${tomcat_url} (not for multiprint)"
+
+    preflight remote ${specfile}
+    json=$(remote_print  ${specfile} ${tomcat_url})
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
    
     echo $pdf_url
+    sleep 0.5
    
-    curl -o "pdfs/remote/${specfile}.pdf" ${pdf_url}
+    curl -o "pdfs/tomcat/${specfile}.pdf" ${pdf_url}
     ;;
+
+remote) echo "Doing a remote print"
+
+    preflight remote ${specfile}
+     
+    movie=$(cat specs/${specfile}.json  | jq '.movie')
+    
+    if [ "${movie}" == "true" ]; then
+       echo "Movie mode"
+       PRINT=printmulti
+    else
+      PRINT=print
+    fi
+    # Multiprint
+    if [ "${movie}" == "true" ]; then
+     
+        done="ongoing"
+     
+        #{"idToCheck":"1711102228415808"}
+      
+        first=$(remote_print  ${specfile} ${BASEURL}/${PRINT})
+      
+        #  {"status":"done","getURL":"https://service-print.prod.bgdi.ch/print/-multi1711102035267851.pdf.printout","written":109884753}
+     
+        idToCheck=$(echo ${first} | jq -r '.idToCheck')
+        echo "idToCheck=$idToCheck"
+     
+        # {"status":"ongoing","total":23,"done":0}
+     
+        while [[ "${status}" != "done" ]]; 
+           do sleep 5; 
+           json=$(curl -s  "${BASEURL}/printprogress?id=$idToCheck")
+           echo $json
+           status=$(echo $json | jq -r '.status')
+           echo "waiting  $json $status" [[ "${status}" != "done" ]]  && echo not-equal || echo equal
+        
+       done
+
+    # simple
+    else
+        json=$(remote_print  ${specfile} ${BASEURL}/${PRINT})
+    fi
+    
+    # Get the PDF 
+    pdf_url=$(echo ${json} | jq -r '.getURL')
+   
+    echo "#### $pdf_url ####"
+
+    sleep 0.5
+    
+    pdf_file="pdfs/remote/${specfile}.pdf"
+   
+    curl -s -o ${pdf_file} ${pdf_url}
+    
+    echo "Dowloaded to: ${pdf_file}"
+    echo
+    echo $(file ${pdf_file})
+    
+    echo $PRINT
+    ;;
+
 fixed) echo "Doing a remote print on fixed"
-    print_spec ${specfile}
-    clean remote ${specfile}
-    json=$(remote_print  ${specfile} ${HOST_FIXED})
+
+    preflight remote ${specfile}
+    json=$(remote_print  ${specfile} ${BASEURL_FIXED})
    
     pdf_url=$(echo ${json} | jq -r '.getURL')
    

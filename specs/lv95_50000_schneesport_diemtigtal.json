@@ -1,0 +1,476 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": "0.85",
+      "layer": "ch.swisstopo.pixelkarte-farbe-pk50.noscale",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": "0.2",
+      "layer": "ch.swisstopo-karto.hangneigung",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "20160101"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": "0.6",
+      "layer": "ch.bafu.wrz-jagdbanngebiete_select",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": "0.6",
+      "layer": "ch.bafu.wrz-wildruhezonen_portal",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": "0.8",
+      "layer": "ch.swisstopo-karto.schneeschuhrouten",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": "0.8",
+      "layer": "ch.swisstopo-karto.skitouren",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {},
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": []
+      }
+    },
+    {
+      "baseURL": "https://wms.geo.admin.ch/",
+      "opacity": 1,
+      "singleTile": true,
+      "type": "WMS",
+      "layers": [
+        "org.epsg.grid_2056"
+      ],
+      "format": "image/png",
+      "styles": [
+        ""
+      ],
+      "customParams": {
+        "TRANSPARENT": true,
+        "MAP_RESOLUTION": "150"
+      }
+    }
+  ],
+  "legends": [
+    {
+      "name": "Pente plus de 30°",
+      "classes": [
+        {
+          "name": "",
+          "icon": "https://api3.geo.admin.ch/static/images/legends/ch.swisstopo-karto.hangneigung_fr.png"
+        }
+      ]
+    },
+    {
+      "name": "Sites de protection de la faune",
+      "classes": [
+        {
+          "name": "",
+          "icon": "https://api3.geo.admin.ch/static/images/legends/ch.bafu.wrz-jagdbanngebiete_select_fr.png"
+        }
+      ]
+    },
+    {
+      "name": "Zones de tranquillité",
+      "classes": [
+        {
+          "name": "",
+          "icon": "https://api3.geo.admin.ch/static/images/legends/ch.bafu.wrz-wildruhezonen_portal_fr.png"
+        }
+      ]
+    },
+    {
+      "name": "Itinéraires en raquette",
+      "classes": [
+        {
+          "name": "",
+          "icon": "https://api3.geo.admin.ch/static/images/legends/ch.swisstopo-karto.schneeschuhrouten_fr.png"
+        }
+      ]
+    },
+    {
+      "name": "Itinéraires à ski",
+      "classes": [
+        {
+          "name": "",
+          "icon": "https://api3.geo.admin.ch/static/images/legends/ch.swisstopo-karto.skitouren_fr.png"
+        }
+      ]
+    }
+  ],
+  "enableLegends": true,
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dschneesport%26bgLayer%3DvoidLayer%26E%3D2602723.79%26N%3D1157172.78%26zoom%3D5%26layers_opacity%3D0.85%2C0.5%2C0.2%2C0.6%2C0.6%2C0.8%2C0.8%2C1%2C1%26layers%3Dch.swisstopo.pixelkarte-farbe-pk50.noscale%2Cch.swisstopo.hangneigung-ueber_30%2Cch.swisstopo-karto.hangneigung%2Cch.bafu.wrz-jagdbanngebiete_select%2Cch.bafu.wrz-wildruhezonen_portal%2Cch.swisstopo-karto.schneeschuhrouten%2Cch.swisstopo-karto.skitouren%2Cch.swisstopo.skitourenkarte-50.metadata%2Cch.bav.haltestellen-oev%26layers_visibility%3Dtrue%2Cfalse%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Cfalse%2Cfalse%26catalogNodes%3D2352",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2602723.7918391204,
+        1157172.7777621846
+      ],
+      "bbox": [
+        2595650.597394676,
+        1152498.472206629,
+        2609796.986283565,
+        1161847.0833177401
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "50000.0",
+      "dataOwner": " swisstopo,OFEV,ct. [OFEV]",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://s.geo.admin.ch/771e21dc6c",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}

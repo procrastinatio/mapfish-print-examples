@@ -1,0 +1,67 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "https://wfs.geodienste.ch/av/deu?",
+      "layers": [
+        "Bodenbedeckung"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {},
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": []
+      }
+    }
+  ],
+  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3DvoidLayer%26E%3D2599809.70%26N%3D1199480.53%26zoom%3D7%26catalogNodes%3D687%26layers%3DWMS%257C%257CBodenbedeckung%257C%257Chttps%3A%252F%252Fwfs.geodienste.ch%252Fav%252Fdeu%253F%257C%257CBodenbedeckung%257C%257C1.3.0",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2599809.6950042862,
+        1199480.530645637
+      ],
+      "bbox": [
+        2598395.0561153973,
+        1198545.669534526,
+        2601224.3338931752,
+        1200415.391756748
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "10000.0",
+      "dataOwner": "",
+      "thirdPartyDataOwner": "© wfs.geodienste.ch",
+      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733f667ce",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}

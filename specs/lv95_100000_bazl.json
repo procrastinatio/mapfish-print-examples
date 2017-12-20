@@ -1,0 +1,281 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "layer": "ch.swisstopo.pixelkarte-grau",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5,
+        0.25
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": 0.44999999999999996,
+      "layer": "ch.swisstopo.digitales-hoehenmodell_25_reliefschattierung",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "png",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "20010615"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": 0.7,
+      "layer": "ch.swisstopo.pixelkarte-farbe-pk100.noscale",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": 1,
+      "layer": "ch.bazl.luftfahrthindernis",
+      "type": "WMS",
+      "baseURL": "https://wms.geo.admin.ch/",
+      "layers": [
+        "ch.bazl.luftfahrthindernis"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": true
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {},
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": []
+      }
+    },
+    {
+      "baseURL": "https://wms.geo.admin.ch/",
+      "opacity": 1,
+      "singleTile": true,
+      "type": "WMS",
+      "layers": [
+        "org.epsg.grid_2056"
+      ],
+      "format": "image/png",
+      "styles": [
+        ""
+      ],
+      "customParams": {
+        "TRANSPARENT": true,
+        "MAP_RESOLUTION": "150"
+      }
+    }
+  ],
+  "legends": [
+    {
+      "name": "Obstacles à la navigation aérienne",
+      "classes": [
+        {
+          "name": "",
+          "icon": "https://api3.geo.admin.ch/static/images/legends/ch.bazl.luftfahrthindernis_fr.png"
+        }
+      ]
+    }
+  ],
+  "enableLegends": true,
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-grau%26layers%3Dch.swisstopo.digitales-hoehenmodell_25_reliefschattierung%2Cch.swisstopo.swisstlm3d-wanderwege%2Cch.swisstopo.swisstlm3d-karte-grau%2Cch.swisstopo.vec25-primaerflaechen%2Cch.swisstopo.pixelkarte-farbe-pk100.noscale%2Cch.bazl.luftfahrthindernis%26layers_visibility%3Dtrue%2Cfalse%2Cfalse%2Cfalse%2Ctrue%2Ctrue%26E%3D2694507.88%26N%3D1155287.03%26zoom%3D4%26layers_opacity%3D0.45%2C1%2C1%2C0.25%2C0.7%2C1",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2694507.8777849125,
+        1155287.0297335314
+      ],
+      "bbox": [
+        2680361.4888960235,
+        1145938.4186224204,
+        2708654.2666738015,
+        1164635.6408446424
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "100000.0",
+      "dataOwner": " swisstopo,OFAC",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://s.geo.admin.ch/771e1f759c",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}

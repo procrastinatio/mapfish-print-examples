@@ -1,0 +1,57 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "WMS",
+      "baseURL": "https://wms.geo.bs.ch/wmsBS?",
+      "layers": [
+        "bodenbedeckung_grau"
+      ],
+      "styles": [
+        ""
+      ],
+      "format": "image/png",
+      "customParams": {
+        "EXCEPTIONS": "XML",
+        "TRANSPARENT": "true",
+        "CRS": "EPSG:2056",
+        "MAP_RESOLUTION": "150"
+      },
+      "singleTile": false
+    }
+  ],
+  "qrcodeurl": "https://mf-chsdi3.int.bgdi.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.int.bgdi.ch%2Fmom_3rd_parties%2Findex.html%3Fprint_url%3D%252F%252Fservice-print.dev.bgdi.ch%26lang%3Den%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-grau%26E%3D2611298.59%26N%3D1267414.27%26zoom%3D9%26layers%3DWMS%257C%257CBB_Nummern_Namen%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Cbb_nummern_namen%257C%257C1.1.1%2CWMS%257C%257CEinzelobjekte%2520(Punkte)%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Ceo_punkte%257C%257C1.1.1%2CWMS%257C%257CBodenbedeckung%2520grau%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Cbodenbedeckung_grau%257C%257C1.1.1%2CWMS%257C%257CEinzelobjekte%2520(Flaechen)%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Ceo_flaechen%257C%257C1.1.1%2CWMS%257C%257CEinzelobjekte%2520(Linien)%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Ceo_linien%257C%257C1.1.1%2CKML%257C%257Chttps%3A%252F%252Fwww.procrastinatio.org%252Fkml%252Fbln-style.kmz%2CWMS%257C%257CEO_Nummern_Namen_Linien%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Ceo_nummern_namen_linien%257C%257C1.1.1%2CWMS%257C%257CEO_Nummern_Namen_Punkte%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Ceo_nummern_namen_punkte%257C%257C1.1.1%2CWMS%257C%257CFixpunkte%257C%257Chttps%3A%252F%252Fwms.geo.bs.ch%252FwmsBS%253F%257C%257Cfixpunkte%257C%257C1.1.1%26layers_visibility%3Dfalse%2Cfalse%2Ctrue%2Cfalse%2Cfalse%2Cfalse%2Cfalse%2Cfalse%2Cfalse",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2611298.592561314,
+        1267414.274228648
+      ],
+      "bbox": [
+        2610591.2731168694,
+        1266946.8436730925,
+        2612005.9120057584,
+        1267881.7047842036
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "5000.0",
+      "dataOwner": "© swisstopo",
+      "thirdPartyDataOwner": "wms.geo.bs.ch",
+      "shortLink": "https://mf-chsdi3.int.bgdi.ch/7733e20954",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}
