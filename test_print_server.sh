@@ -3,6 +3,7 @@
 _V=0
 
 DEFAULT_BASEURL=https://print.geo.admin.ch
+DEFAULT_TOMCAT_URL=http://localhost:8011
 
 # DEFAULT_BASEURL=https://service-print.dev.bgdi.ch
 
@@ -18,8 +19,10 @@ DEFAULT_HOST=$(echo ${BASEURL} | sed -e "s/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/
 
 HOST=${HOST:-${DEFAULT_HOST}}
 
+TOMCAT_URL=${TOMCAT_URL:-${DEFAULT_TOMCAT_URL}}
 
 MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
+CURL_OPTS=""
 
 
 PRINT=printmulti
@@ -145,9 +148,12 @@ function remote_print() {
     local specfile=$1
     local url=$2
     local json
+    local fullpath_specfile="specs/${specfile}.json"
+
+
     #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
-    json=$(curl -v --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
-           --header "Referer: http://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
+    json=$(curl ${CURL_OPTS} --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
+           --header "Referer: https://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
            -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
@@ -174,8 +180,9 @@ else
   specfile=$2
   init
 fi
-
-
+if $DEBUG; then
+    CURL_OPTS=" -v "
+fi
 case "${action}" in
 
 
@@ -198,7 +205,7 @@ debug) echo "Doing a debug print"
     ;;
 
 tomcat)
-    tomcat_url=http://localhost:8009/service-print-main/pdf
+    tomcat_url=${TOMCAT_URL}/service-print-main/pdf
     echo "Doing a local print on tomcat ${tomcat_url} (not for multiprint)"
 
     preflight remote ${specfile}
@@ -215,6 +222,12 @@ tomcat)
 remote) echo "Doing a remote print"
 
     preflight remote ${specfile}
+    fullpath_specfile="specs/${specfile}.json"
+    if [ ! -f "${fullpath_specfile}" ]; then
+        echo "Specfile ${fullpath_specfile} not found"
+        json_files
+        exit 3
+    fi
      
     movie=$(cat specs/${specfile}.json  | jq '.movie')
     
@@ -256,12 +269,13 @@ remote) echo "Doing a remote print"
     
     # Get the PDF 
     pdf_url=$(echo ${json} | jq -r '.getURL')
-   
+    echo ${json}   
     echo "#### $pdf_url ####"
 
     sleep 0.5
     
-    pdf_file="pdfs/remote/${specfile}.pdf"
+    pdf_file="pdfs/remote/${specfile}.${RANDOM}.pdf"
+    #pdf_file="pdfs/remote/${specfile}.pdf"
    
     curl -s -o ${pdf_file} ${pdf_url}
     
@@ -270,6 +284,7 @@ remote) echo "Doing a remote print"
     echo $(file ${pdf_file})
     
     echo $PRINT
+    rm -f ${pdf_file}
     ;;
 
 fixed) echo "Doing a remote print on fixed"
