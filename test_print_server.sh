@@ -152,11 +152,13 @@ function remote_print() {
 
 
     #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
+    time {
     json=$(curl ${CURL_OPTS} --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
            --header "Referer: https://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
            -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
+    }
 
 }
 
@@ -217,6 +219,7 @@ tomcat)
     sleep 0.5
    
     curl -o "pdfs/tomcat/${specfile}.pdf" ${pdf_url}
+    echo "Saved to pdfs/tomcat/${specfile}.pdf"
     ;;
 
 remote) echo "Doing a remote print"
