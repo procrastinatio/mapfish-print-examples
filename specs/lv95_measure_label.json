@@ -1,0 +1,1294 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "layer": "ch.swisstopo.pixelkarte-farbe",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5,
+        0.25
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {
+        "0": {
+          "id": 0,
+          "zIndex": 20,
+          "fillColor": "#ff0000",
+          "fillOpacity": 0.4,
+          "strokeWidth": 1.8,
+          "strokeColor": "#ff0000",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round",
+          "strokeDashstyle": "dash"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "measure_1521729186423",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  2634750,
+                  1231750
+                ],
+                [
+                  2577250,
+                  1198750
+                ],
+                [
+                  2647750,
+                  1150250
+                ],
+                [
+                  2667250,
+                  1194250
+                ]
+              ]
+            },
+            "properties": {
+              "type": "measure",
+              "_gx_style": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "10 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "10 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2626076.8660580665,
+                1226772.3753028903,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "20 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "20 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2617403.7321161325,
+                1221794.7506057804,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "30 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "30 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2608730.598174199,
+                1216817.1259086707,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "40 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "40 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2600057.464232265,
+                1211839.5012115608,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "50 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "50 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2591384.3302903315,
+                1206861.876514451,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "60 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "60 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2582711.1963483975,
+                1201884.2518173412,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "70 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "70 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2580301.058059026,
+                1196651.045165067,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "80 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "80 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2588539.772056398,
+                1190983.2773796413,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "90 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "90 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2596778.4860537695,
+                1185315.5095942153,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "100 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "100 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2605017.200051141,
+                1179647.7418087893,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "110 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "110 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2613255.914048513,
+                1173979.9740233636,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "120 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "120 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2621494.6280458844,
+                1168312.2062379376,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "130 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "130 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2629733.3420432564,
+                1162644.4384525116,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "140 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "140 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2637972.056040628,
+                1156976.6706670858,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "150 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "150 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2646210.7700379994,
+                1151308.9028816598,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "160 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "160 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2651044.760304499,
+                1157684.330943485,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "170 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "170 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2655096.5033484926,
+                1166826.7255042908,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "180 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "180 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2659148.246392486,
+                1175969.1200650965,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "190 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "190 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 3
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2663199.9894364793,
+                1185111.5146259023,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    },
+    {
+      "type": "Vector",
+      "styles": {
+        "1": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/marker.png",
+          "graphicWidth": 20,
+          "graphicHeight": 30,
+          "graphicXOffset": -12,
+          "graphicYOffset": -30
+        },
+        "2": {
+          "externalGraphic": "https://map.geo.admin.ch/master/ca926a3/1803121451/1803121451/img/bubble.png",
+          "graphicWidth": 97,
+          "graphicHeight": 27,
+          "graphicXOffset": -48,
+          "graphicYOffset": -27,
+          "label": "199.99 km",
+          "labelXOffset": 0,
+          "labelYOffset": 18,
+          "fontColor": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "label": "199.99 km",
+          "labelXOffset": 0,
+          "labelYOffset": 10,
+          "fontColor": "#ffffff",
+          "fontSize": 8,
+          "fontWeight": "normal",
+          "fillColor": "#ff0000",
+          "strokeColor": "#ff0000"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "_gx_style": 2
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2667250,
+                1194250,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "name": "drawing",
+      "opacity": 1
+    }
+  ],
+  "legends": [],
+  "enableLegends": false,
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Den%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%2CKML%257C%257Chttps%3A%252F%252Fpublic.geo.admin.ch%252FaiJ2-otCRA6uEqCKlSqopA%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%2Ctrue%26layers_timestamp%3D18641231%2C%2C%2C%2C",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2660000.0000000005,
+        1190000
+      ],
+      "bbox": [
+        2447804.166666667,
+        1049770.8333333333,
+        2872195.833333334,
+        1330229.1666666667
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "1500000.0",
+      "dataOwner": "© swisstopo, public.geo.admin.ch",
+      "shortLink": "https://s.geo.admin.ch/79797bbcc2",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}

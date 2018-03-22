@@ -1,0 +1,5330 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "en",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "layer": "ch.swisstopo.pixelkarte-grau",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "2056",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+        2420000,
+        1350000
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+        4000,
+        3750,
+        3500,
+        3250,
+        3000,
+        2750,
+        2500,
+        2250,
+        2000,
+        1750,
+        1500,
+        1250,
+        1000,
+        750,
+        650,
+        500,
+        250,
+        100,
+        50,
+        20,
+        10,
+        5,
+        2.5,
+        2,
+        1.5,
+        1,
+        0.5,
+        0.25
+      ],
+      "maxExtent": [
+        2420000,
+        1030000,
+        2900000,
+        1350000
+      ]
+    },
+    {
+      "opacity": 1,
+      "layer": "ch.bafu.hydroweb-messstationen_gefahren",
+      "type": "Vector",
+      "styles": {
+        "3": {
+          "id": 3,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "17": {
+          "id": 17,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "18": {
+          "id": 18,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "19": {
+          "id": 19,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "20": {
+          "id": 20,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "21": {
+          "id": 21,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "22": {
+          "id": 22,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "23": {
+          "id": 23,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "24": {
+          "id": 24,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "25": {
+          "id": 25,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "26": {
+          "id": 26,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "27": {
+          "id": 27,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "28": {
+          "id": 28,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "29": {
+          "id": 29,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "30": {
+          "id": 30,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "31": {
+          "id": 31,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "33": {
+          "id": 33,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "34": {
+          "id": 34,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "35": {
+          "id": 35,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "36": {
+          "id": 36,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "37": {
+          "id": 37,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "38": {
+          "id": 38,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "39": {
+          "id": 39,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "40": {
+          "id": 40,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "41": {
+          "id": 41,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "42": {
+          "id": 42,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "43": {
+          "id": 43,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "44": {
+          "id": 44,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "46": {
+          "id": 46,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "48": {
+          "id": 48,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "49": {
+          "id": 49,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "50": {
+          "id": 50,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "51": {
+          "id": 51,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "59": {
+          "id": 59,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "60": {
+          "id": 60,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "61": {
+          "id": 61,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "62": {
+          "id": 62,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "63": {
+          "id": 63,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "64": {
+          "id": 64,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "65": {
+          "id": 65,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "66": {
+          "id": 66,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "67": {
+          "id": 67,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "68": {
+          "id": 68,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "69": {
+          "id": 69,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "70": {
+          "id": 70,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "71": {
+          "id": 71,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "72": {
+          "id": 72,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "73": {
+          "id": 73,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "74": {
+          "id": 74,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "75": {
+          "id": 75,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "76": {
+          "id": 76,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "77": {
+          "id": 77,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "78": {
+          "id": 78,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "79": {
+          "id": 79,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "80": {
+          "id": 80,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "81": {
+          "id": 81,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "82": {
+          "id": 82,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "83": {
+          "id": 83,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "84": {
+          "id": 84,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "85": {
+          "id": 85,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "86": {
+          "id": 86,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "87": {
+          "id": 87,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "88": {
+          "id": 88,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "89": {
+          "id": 89,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "90": {
+          "id": 90,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "91": {
+          "id": 91,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "92": {
+          "id": 92,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "93": {
+          "id": 93,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "94": {
+          "id": 94,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "95": {
+          "id": 95,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "96": {
+          "id": 96,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "97": {
+          "id": 97,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "98": {
+          "id": 98,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "99": {
+          "id": 99,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "100": {
+          "id": 100,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "101": {
+          "id": 101,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "102": {
+          "id": 102,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "103": {
+          "id": 103,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "104": {
+          "id": 104,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "105": {
+          "id": 105,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "106": {
+          "id": 106,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "107": {
+          "id": 107,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "108": {
+          "id": 108,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "109": {
+          "id": 109,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "110": {
+          "id": 110,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "111": {
+          "id": 111,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "112": {
+          "id": 112,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "113": {
+          "id": 113,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "114": {
+          "id": 114,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "115": {
+          "id": 115,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "116": {
+          "id": 116,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "117": {
+          "id": 117,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "118": {
+          "id": 118,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "119": {
+          "id": 119,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "120": {
+          "id": 120,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "121": {
+          "id": 121,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "122": {
+          "id": 122,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "123": {
+          "id": 123,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "124": {
+          "id": 124,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "125": {
+          "id": 125,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "126": {
+          "id": 126,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "127": {
+          "id": 127,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "128": {
+          "id": 128,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "129": {
+          "id": 129,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "130": {
+          "id": 130,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "131": {
+          "id": 131,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "133": {
+          "id": 133,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "134": {
+          "id": 134,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "135": {
+          "id": 135,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "136": {
+          "id": 136,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "137": {
+          "id": 137,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "138": {
+          "id": 138,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "139": {
+          "id": 139,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "140": {
+          "id": 140,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "141": {
+          "id": 141,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "142": {
+          "id": 142,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "143": {
+          "id": 143,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "144": {
+          "id": 144,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "145": {
+          "id": 145,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "146": {
+          "id": 146,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "147": {
+          "id": 147,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "148": {
+          "id": 148,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "149": {
+          "id": 149,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "150": {
+          "id": 150,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "151": {
+          "id": 151,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "152": {
+          "id": 152,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "154": {
+          "id": 154,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "155": {
+          "id": 155,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "156": {
+          "id": 156,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "157": {
+          "id": 157,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "158": {
+          "id": 158,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "159": {
+          "id": 159,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "160": {
+          "id": 160,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "161": {
+          "id": 161,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "162": {
+          "id": 162,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "163": {
+          "id": 163,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "164": {
+          "id": 164,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "165": {
+          "id": 165,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "166": {
+          "id": 166,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "167": {
+          "id": 167,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "168": {
+          "id": 168,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "169": {
+          "id": 169,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "170": {
+          "id": 170,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "171": {
+          "id": 171,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "172": {
+          "id": 172,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "173": {
+          "id": 173,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "174": {
+          "id": 174,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "175": {
+          "id": 175,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        },
+        "176": {
+          "id": 176,
+          "rotation": 0,
+          "pointRadius": 8,
+          "graphicWidth": 6.4799999999999995,
+          "graphicHeight": 6.4799999999999995,
+          "graphicXOffset": -3.2399999999999998,
+          "graphicYOffset": -3.2399999999999998,
+          "fillColor": "#00ff00",
+          "fillOpacity": 1,
+          "strokeWidth": 0.6,
+          "strokeColor": "#ffffff",
+          "strokeOpacity": 1,
+          "strokeLinecap": "round",
+          "strokeLinejoin": "round"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "2418",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2763570.000004208,
+                1169909.9998456778
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2418.html'>Station page</a>",
+              "name": "Julia - Tiefencastel (2418)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 3
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2112",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2749040.0000036876,
+                1244219.999853446
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2112.html'>Station page</a>",
+              "name": "Sitter - Appenzell (2112)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 17
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2468",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2742540.0000035088,
+                1253229.9998544103
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2468.html'>Station page</a>",
+              "name": "Sitter - St. Gallen, Bruggen / Au (2468)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 18
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2181",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2733560.000003269,
+                1263179.9998554804
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2181.html'>Station page</a>",
+              "name": "Thur - Halden (2181)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 19
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2374",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2727110.0000031386,
+                1247289.9998538129
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2374.html'>Station page</a>",
+              "name": "Necker - Mogelsberg, Aachsäge (2374)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 20
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2305",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2737270.0000033826,
+                1251289.9998542154
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2305.html'>Station page</a>",
+              "name": "Glatt - Herisau, Zellersmühle (2305)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 21
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2312",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2744410.0000035246,
+                1268399.9998560161
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2312.html'>Station page</a>",
+              "name": "Aach - Salmsach, Hungerbühl (2312)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 22
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2032",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2746160.000003564,
+                1270039.999856179
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2032.html'>Station page</a>",
+              "name": "Bodensee (Obersee) - Romanshorn (2032)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 23
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2033",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2735000.000003451,
+                1182029.9998469818
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2033.html'>Station page</a>",
+              "name": "Vorderrhein - Ilanz (2033)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 24
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2602",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2753890.00000392,
+                1189369.9998477076
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2602.html'>Station page</a>",
+              "name": "Rhein - Domat/Ems (2602)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 25
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2426",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2750410.0000037854,
+                1212509.999850122
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2426.html'>Station page</a>",
+              "name": "Seez - Mels (2426)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 26
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2118",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2734430.00000337,
+                1219559.999850888
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2118.html'>Station page</a>",
+              "name": "Walensee - Murg (2118)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 27
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2104",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2725160.000003134,
+                1221379.9998510934
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2104.html'>Station page</a>",
+              "name": "Linth - Weesen, Biäsche (2104)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 28
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2187",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2756795.0000039013,
+                1234004.9998523567
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2187.html'>Station page</a>",
+              "name": "Werdenberger Binnenkanal - Salez (2187)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 29
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2410",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2757750.0000039237,
+                1234589.999852415
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2410.html'>Station page</a>",
+              "name": "Liechtensteiner Binnenkanal - Ruggell (2410)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 30
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2347",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2733545.000003522,
+                1118159.9998404798
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2347.html'>Station page</a>",
+              "name": "Riale di Roggiasca - Roveredo, Bacino di compenso (2347)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 31
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2474",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2729440.000003399,
+                1127179.9998413883
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2474.html'>Station page</a>",
+              "name": "Calancasca - Buseno (2474)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 33
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2631",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2733706.0000034664,
+                1153944.999844103
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2631.html'>Station page</a>",
+              "name": "Hinterrhein - Hinterrhein, Schiessplatz (2631)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 34
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2141",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2763420.000004204,
+                1170144.999845701
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2141.html'>Station page</a>",
+              "name": "Albula - Tiefencastel (2141)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 35
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2387",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2753570.000003939,
+                1175729.999846296
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2387.html'>Station page</a>",
+              "name": "Hinterrhein - Fürstenau (2387)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 36
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2498",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2735330.00000346,
+                1181789.999846959
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2498.html'>Station page</a>",
+              "name": "Glenner - Castrisch (2498)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 37
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2430",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2718810.000003059,
+                1167689.9998455334
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2430.html'>Station page</a>",
+              "name": "Rein da Sumvitg - Sumvitg, Encardens (2430)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 38
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2372",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2723985.0000031106,
+                1217964.999850737
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2372.html'>Station page</a>",
+              "name": "Linth - Mollis, Linthbrücke (2372)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 39
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2126",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2714105.0000027944,
+                1261719.9998553607
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2126.html'>Station page</a>",
+              "name": "Murg - Wängi (2126)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 40
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2414",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2718840.0000029323,
+                1248439.9998539481
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2414.html'>Station page</a>",
+              "name": "Rietholzbach - Mosnang, Rietholz (2414)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 41
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2303",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2723675.0000030445,
+                1252719.9998543914
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2303.html'>Station page</a>",
+              "name": "Thur - Jonschwil, Mühlau (2303)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 42
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2386",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2709540.0000026706,
+                1269659.9998562043
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2386.html'>Station page</a>",
+              "name": "Murg - Frauenfeld (2386)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 43
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2043",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2718570.0000028717,
+                1281729.9998574744
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2043.html'>Station page</a>",
+              "name": "Bodensee (Untersee) - Berlingen (2043)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 44
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2420",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2724765.0000032866,
+                1120359.9998407126
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2420.html'>Station page</a>",
+              "name": "Moesa - Lumino, Sassello (2420)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 46
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2605",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2708420.000002852,
+                1122919.9998409934
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2605.html'>Station page</a>",
+              "name": "Verzasca - Lavertezzo, Campiòi (2605)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 48
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2494",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2716120.000003037,
+                1135329.999842236
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2494.html'>Station page</a>",
+              "name": "Ticino - Pollegio, Campagna (2494)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 49
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2612",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2708060.0000028415,
+                1123949.9998410954
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2612.html'>Station page</a>",
+              "name": "Riale di Pincascia - Lavertezzo (2612)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 50
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2086",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2717770.000003077,
+                1137269.9998424284
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2086.html'>Station page</a>",
+              "name": "Brenno - Loderio (2086)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 51
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2132",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2691460.000002237,
+                1263819.9998556087
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2132.html'>Station page</a>",
+              "name": "Töss - Neftenbach (2132)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 59
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2143",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2667060.000001635,
+                1269229.9998562126
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2143.html'>Station page</a>",
+              "name": "Rhein - Rekingen (2143)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 60
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2044",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2693510.0000022757,
+                1272499.9998565295
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2044.html'>Station page</a>",
+              "name": "Thur - Andelfingen (2044)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 61
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2415",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2678040.000001902,
+                1269719.9998562553
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2415.html'>Station page</a>",
+              "name": "Glatt - Rheinsfelden (2415)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 62
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2288",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2689145.0000021583,
+                1281974.9998575377
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2288.html'>Station page</a>",
+              "name": "Rhein - Neuhausen, Flurlingerbrücke (2288)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 63
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2017",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2681555.0000020377,
+                1224659.9998515018
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2017.html'>Station page</a>",
+              "name": "Zugersee - Zug (2017)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 64
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2477",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2680600.0000020126,
+                1226069.999851649
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2477.html'>Station page</a>",
+              "name": "Lorze - Zug, Letzi (2477)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 65
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2125",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2674715.0000018617,
+                1229844.9998520538
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2125.html'>Station page</a>",
+              "name": "Lorze - Frauenthal (2125)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 66
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2110",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2672520.0000018063,
+                1230599.9998521297
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2110.html'>Station page</a>",
+              "name": "Reuss - Mühlau, Hünenberg (2110)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 67
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2209",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2684000.0000020755,
+                1245474.9998536836
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2209.html'>Station page</a>",
+              "name": "Zürichsee - Zürich (2209)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 68
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2176",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2682145.000002028,
+                1246889.9998538373
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2176.html'>Station page</a>",
+              "name": "Sihl - Zürich, Sihlhölzli (2176)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 69
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2099",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2682055.000002023,
+                1249429.9998541034
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2099.html'>Station page</a>",
+              "name": "Limmat - Zürich, Unterhard (2099)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 70
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2084",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2688230.0000022263,
+                1206139.9998495511
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2084.html'>Station page</a>",
+              "name": "Muota - Ingenbohl (2084)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 71
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2481",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2673555.0000018594,
+                1202869.9998492328
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2481.html'>Station page</a>",
+              "name": "Engelberger Aa - Buochs, Flugplatz (2481)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 72
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2499",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2702392.000002588,
+                1203327.9998492415
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2499.html'>Station page</a>",
+              "name": "Schlichenden Brünnen - Muotathal (2499)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 73
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2300",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2704425.000002623,
+                1215309.99985049
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2300.html'>Station page</a>",
+              "name": "Minster - Euthal, Rüti (2300)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 74
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2635",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2700710.0000025257,
+                1218124.9998507902
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2635.html'>Station page</a>",
+              "name": "Grossbach - Einsiedeln, Gross (2635)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 75
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2609",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2698640.000002467,
+                1223019.9998513046
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2609.html'>Station page</a>",
+              "name": "Alp - Einsiedeln (2609)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 76
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2604",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2697240.0000024317,
+                1223279.999851336
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2604.html'>Station page</a>",
+              "name": "Biber - Biberbrugg (2604)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 77
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2018",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2662830.000001546,
+                1252579.9998544555
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2018.html'>Station page</a>",
+              "name": "Reuss - Mellingen (2018)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 78
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2243",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2665640.00000161,
+                1258689.999855094
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2243.html'>Station page</a>",
+              "name": "Limmat - Baden, Limmatpromenade (2243)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 79
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2016",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2657000.0000013974,
+                1259359.9998551789
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2016.html'>Station page</a>",
+              "name": "Aare - Brugg (2016)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 80
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2202",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2622270.0000005458,
+                1259749.9998552394
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2202.html'>Station page</a>",
+              "name": "Ergolz - Liestal (2202)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 81
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2106",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2613570.000000332,
+                1263079.9998555908
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2106.html'>Station page</a>",
+              "name": "Birs - Münchenstein, Hofmatt (2106)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 82
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2205",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2659970.000001467,
+                1263179.9998555784
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2205.html'>Station page</a>",
+              "name": "Aare - Untersiggenthal, Stilli (2205)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 83
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2091",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2627190.000000663,
+                1267839.999856092
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2091.html'>Station page</a>",
+              "name": "Rhein - Rheinfelden, Messstation (2091)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 84
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2417",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2651320.0000012834,
+                1223139.9998513649
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2417.html'>Station page</a>",
+              "name": "Suhre - Oberkirch (2417)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 85
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2497",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2640560.0000010123,
+                1226739.9998517483
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2497.html'>Station page</a>",
+              "name": "Luthern - Nebikon (2497)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 86
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2416",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2661390.000001529,
+                1230219.9998521006
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2416.html'>Station page</a>",
+              "name": "Aabach - Hitzkirch, Richensee (2416)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 87
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2471",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2629340.0000007297,
+                1233554.9998524718
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2471.html'>Station page</a>",
+              "name": "Murg - Murgenthal, Walliswil (2471)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 88
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2063",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2629665.0000007367,
+                1235149.9998526408
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2063.html'>Station page</a>",
+              "name": "Aare - Murgenthal (2063)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 89
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2450",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2637580.0000009327,
+                1237079.9998528361
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2450.html'>Station page</a>",
+              "name": "Wigger - Zofingen (2450)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 90
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2434",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2634330.0000008484,
+                1244479.9998536212
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2434.html'>Station page</a>",
+              "name": "Dünnern - Olten, Hammermühle (2434)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 91
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2207",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2666950.0000016843,
+                1211914.99985018
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2207.html'>Station page</a>",
+              "name": "Vierwaldstättersee - Luzern (2207)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 92
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2152",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2665330.0000016433,
+                1211799.9998501707
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2152.html'>Station page</a>",
+              "name": "Reuss - Luzern, Geissmattbrücke (2152)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 93
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2487",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2647870.0000012056,
+                1209509.999849946
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2487.html'>Station page</a>",
+              "name": "Kleine Emme - Werthenstein, Chappelboden (2487)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 94
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2070",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2623610.0000005974,
+                1200429.999849006
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2070.html'>Station page</a>",
+              "name": "Emme - Emmenmatt, nur Hauptstation (2070)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 95
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2634",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2663700.000001601,
+                1213629.9998503602
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2634.html'>Station page</a>",
+              "name": "Kleine Emme - Emmen (2634)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 96
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2608",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2658530.0000014673,
+                1218289.9998508536
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2608.html'>Station page</a>",
+              "name": "Sellenbodenbach - Neuenkirch (2608)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 97
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2343",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2629560.000000741,
+                1219134.9998509544
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2343.html'>Station page</a>",
+              "name": "Langeten - Huttwil, Häberenbad (2343)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 98
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2610",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2599484.9999999874,
+                1244149.99985359
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2610.html'>Station page</a>",
+              "name": "Scheulte - Vicques (2610)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 99
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2210",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2572529.999999321,
+                1244459.9998536198
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2210.html'>Station page</a>",
+              "name": "Doubs - Ocourt (2210)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 100
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2479",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2593519.9999998403,
+                1246289.9998538152
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2479.html'>Station page</a>",
+              "name": "Sorne - Delémont (2479)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 101
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2478",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2596779.999999921,
+                1249069.9998541113
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2478.html'>Station page</a>",
+              "name": "Birse - Soyhières, Bois du Treuil (2478)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 102
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2485",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2567829.9999992126,
+                1261199.9998553847
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2485.html'>Station page</a>",
+              "name": "Allaine - Boncourt, Frontière (2485)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 103
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2199",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2611800.0000002873,
+                1269699.9998562897
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2199.html'>Station page</a>",
+              "name": "Wiese - Basel (2199)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 104
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2289",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2613400.000000327,
+                1267649.999856076
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2289.html'>Station page</a>",
+              "name": "Rhein - Basel, Rheinhalle (2289)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 105
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2247",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2544559.9999986077,
+                1214879.9998505001
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2247.html'>Station page</a>",
+              "name": "Doubs - Sortie du lac des Brenets (2247)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 106
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2208",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2578319.999999456,
+                1215669.9998505968
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2208.html'>Station page</a>",
+              "name": "Bielersee - Ligerz, Klein Twann (2208)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 107
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2029",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2588219.999999705,
+                1219019.9998509474
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2029.html'>Station page</a>",
+              "name": "Aare - Brügg, Aegerten (2029)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 108
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2155",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2608220.000000206,
+                1223249.9998513914
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2155.html'>Station page</a>",
+              "name": "Emme - Wiler, Limpachmündung, nur Hauptstation (2155)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 109
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2307",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2579809.999999496,
+                1227349.9998518191
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2307.html'>Station page</a>",
+              "name": "Suze - Sonceboz (2307)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 110
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2370",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2561429.99999904,
+                1231049.999852198
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2370.html'>Station page</a>",
+              "name": "Doubs - Le Noirmont, La Goule (2370)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 111
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2122",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2595739.9999998943,
+                1237009.9998528417
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2122.html'>Station page</a>",
+              "name": "Birse - Moutier, La Charrue (2122)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 112
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2447",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2575339.9999993765,
+                1201449.9998491134
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2447.html'>Station page</a>",
+              "name": "Canal de la Broye - Sugiez (2447)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 113
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2500",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2603005.000000076,
+                1202454.9998492203
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2500.html'>Station page</a>",
+              "name": "Worble - Ittigen (2500)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 114
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2480",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2554349.999998844,
+                1199939.999848944
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2480.html'>Station page</a>",
+              "name": "Areuse - Boudry (2480)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 115
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2458",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2559369.999998975,
+                1206809.9998496638
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2458.html'>Station page</a>",
+              "name": "Seyon - Valangin (2458)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 116
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2149",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2561579.9999990296,
+                1204569.9998494308
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2149.html'>Station page</a>",
+              "name": "Lac de Neuchâtel - Neuchâtel, Port (2149)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 117
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2446",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2569249.999999225,
+                1207859.99984978
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2446.html'>Station page</a>",
+              "name": "Zihlkanal - Gampelen, Zihlbrücke (2446)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 118
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2085",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2580679.999999514,
+                1211649.9998501788
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2085.html'>Station page</a>",
+              "name": "Aare - Hagneck (2085)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 119
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2019",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2649930.0000012787,
+                1177379.999846606
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2019.html'>Station page</a>",
+              "name": "Aare - Brienzwiler (2019)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 120
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2276",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2685500.000002169,
+                1196049.9998485043
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2276.html'>Station page</a>",
+              "name": "Grosstalbach - Isenthal (2276)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 121
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2102",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2661460.0000015604,
+                1194219.9998483406
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2102.html'>Station page</a>",
+              "name": "Sarner Aa - Sarnen (2102)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 122
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2056",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2690085.0000022887,
+                1193209.9998482089
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2056.html'>Station page</a>",
+              "name": "Reuss - Seedorf (2056)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 123
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2436",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2663800.0000016154,
+                1199569.9998488938
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2436.html'>Station page</a>",
+              "name": "Chli Schliere - Alpnach, Chilch Erli (2436)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 124
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2419",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2661910.00000161,
+                1146779.999843456
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2419.html'>Station page</a>",
+              "name": "Rhone - Reckingen (2419)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 125
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2268",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2670810.000001832,
+                1157199.999844517
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2268.html'>Station page</a>",
+              "name": "Rhone - Gletsch (2268)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 126
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2087",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2688120.0000022696,
+                1166319.9998454293
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2087.html'>Station page</a>",
+              "name": "Reuss - Andermatt (2087)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 127
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2607",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2670520.0000018277,
+                1153829.9998441706
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2607.html'>Station page</a>",
+              "name": "Goneri - Oberwald (2607)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 128
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2364",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2694610.0000024536,
+                1152449.9998440067
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2364.html'>Station page</a>",
+              "name": "Ticino - Piotta (2364)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 129
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2200",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2635310.00000091,
+                1164549.999845294
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2200.html'>Station page</a>",
+              "name": "Weisse Lütschine - Zweilütschinen (2200)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 130
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2023",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2635150.0000009025,
+                1172339.9998460896
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2023.html'>Station page</a>",
+              "name": "Brienzersee - Ringgenberg (2023)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 131
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2346",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2641340.0000010836,
+                1129699.9998417383
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2346.html'>Station page</a>",
+              "name": "Rhone - Brig (2346)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 133
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2356",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2684970.000002221,
+                1135959.999842336
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2356.html'>Station page</a>",
+              "name": "Riale di Calneggia - Cavergno, Pontit (2356)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 134
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2342",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2642220.000001107,
+                1129629.9998417273
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2342.html'>Station page</a>",
+              "name": "Saltina - Brig (2342)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 135
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2161",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2643700.0000011413,
+                1137289.999842507
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2161.html'>Station page</a>",
+              "name": "Massa - Blatten bei Naters (2161)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 136
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2475",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2690040.000002358,
+                1132549.9998419853
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2475.html'>Station page</a>",
+              "name": "Maggia - Bignasco, Ponte nuovo (2475)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 137
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2244",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2644500.000001172,
+                1119419.9998407017
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2244.html'>Station page</a>",
+              "name": "Krummbach - Klusmatten (2244)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 138
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2119",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2579419.9999994747,
+                1183669.9998472729
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2119.html'>Station page</a>",
+              "name": "Sarine - Fribourg (2119)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 139
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2159",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2604810.0000001225,
+                1192679.9998482042
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2159.html'>Station page</a>",
+              "name": "Gürbe - Belp, Mülimatt (2159)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 140
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2135",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2600710.000000018,
+                1197999.9998487602
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2135.html'>Station page</a>",
+              "name": "Aare - Bern, Schönau (2135)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 141
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2215",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2584439.999999605,
+                1195299.9998484745
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2215.html'>Station page</a>",
+              "name": "Saane - Laupen (2215)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 142
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2179",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2593349.999999831,
+                1193019.9998482415
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2179.html'>Station page</a>",
+              "name": "Sense - Thörishaus, Sensematt (2179)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 143
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2409",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2627910.0000007097,
+                1191179.9998480435
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2409.html'>Station page</a>",
+              "name": "Emme - Eggiwil, Heidbüel (2409)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 144
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2603",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2627320.000000692,
+                1198599.9998488168
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2603.html'>Station page</a>",
+              "name": "Ilfis - Langnau (2603)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 145
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2109",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2633130.000000852,
+                1168199.9998456703
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2109.html'>Station page</a>",
+              "name": "Lütschine - Gsteig (2109)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 146
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2469",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2617790.0000004577,
+                1168399.9998456943
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2469.html'>Station page</a>",
+              "name": "Kander - Hondrich (2469)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 147
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2251",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2587979.999999691,
+                1170589.9998459197
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2251.html'>Station page</a>",
+              "name": "Rotenbach - Plaffeien, Schwyberg (2251)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 148
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2252",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2588339.9999997,
+                1171014.9998459616
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2252.html'>Station page</a>",
+              "name": "Schwändlibach - Plaffeien, Schwyberg (2252)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 149
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2457",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2633730.000000866,
+                1171509.9998460074
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2457.html'>Station page</a>",
+              "name": "Aare - Ringgenberg, Goldswil (2457)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 150
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2030",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2613230.0000003385,
+                1179279.9998468142
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2030.html'>Station page</a>",
+              "name": "Aare - Thun (2030)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 151
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2093",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2617280.000000444,
+                1171749.9998460386
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2093.html'>Station page</a>",
+              "name": "Thunersee - Spiez, Kraftwerk BKW (2093)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 152
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2011",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2593769.9999998356,
+                1118629.9998406353
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2011.html'>Station page</a>",
+              "name": "Rhône - Sion (2011)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 154
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2351",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2634030.0000008936,
+                1125899.9998413576
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2351.html'>Station page</a>",
+              "name": "Vispa - Visp (2351)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 155
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2269",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2629130.0000007595,
+                1140909.9998428815
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2269.html'>Station page</a>",
+              "name": "Lonza - Blatten (2269)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 156
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2232",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2608710.0000002263,
+                1148299.9998436393
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2232.html'>Station page</a>",
+              "name": "Allenbach - Adelboden (2232)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 157
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2219",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2602630.0000000685,
+                1141659.9998429578
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2219.html'>Station page</a>",
+              "name": "Simme - Oberried / Lenk (2219)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 158
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2151",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2600060.0000000014,
+                1167089.9998455602
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2151.html'>Station page</a>",
+              "name": "Simme - Oberwil (2151)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 159
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2437",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2552059.9999987627,
+                1161649.999844987
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2437.html'>Station page</a>",
+              "name": "Parimbot - Ecublens, Eschiens (2437)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 160
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2412",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2572419.9999992903,
+                1167539.999845601
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2412.html'>Station page</a>",
+              "name": "Sionge - Vuippens, Château (2412)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 161
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2378",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2530079.9999982077,
+                1175559.9998463967
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2378.html'>Station page</a>",
+              "name": "Orbe - Orbe, Le Chalet (2378)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 162
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2369",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2545439.9999986053,
+                1180874.9998469632
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2369.html'>Station page</a>",
+              "name": "Mentue - Yvonand, La Mauguettaz (2369)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 163
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2290",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2532979.9999983,
+                1195879.9998485087
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2290.html'>Station page</a>",
+              "name": "Areuse - St-Sulpice (2290)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 164
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2034",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2561659.999999023,
+                1187319.9998476382
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2034.html'>Station page</a>",
+              "name": "Broye - Payerne, Caserne d 'aviation (2034)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 165
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2004",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2575499.9999993793,
+                1197789.9998487316
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2004.html'>Station page</a>",
+              "name": "Murtensee - Murten (2004)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 166
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2493",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2510079.999997654,
+                1140079.9998427492
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2493.html'>Station page</a>",
+              "name": "Promenthouse - Gland, Route Suisse (2493)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 167
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2486",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2554674.9999988214,
+                1146564.9998434437
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2486.html'>Station page</a>",
+              "name": "Veveyse - Vevey, Copet (2486)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 168
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2433",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2520719.999997939,
+                1147409.9998435045
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2433.html'>Station page</a>",
+              "name": "Aubonne - Allaman, Le Coulet (2433)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 169
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2027",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2524939.99999805,
+                1148409.9998436167
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2027.html'>Station page</a>",
+              "name": "Lac Léman - St-Prex (2027)",
+              "param": "Waterlevel",
+              "w-typ": "Lake",
+              "ws-class": 1,
+              "_gx_style": 170
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2432",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2532039.9999982393,
+                1154159.9998442053
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2432.html'>Station page</a>",
+              "name": "Venoge - Ecublens, Les Bois (2432)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 171
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2371",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2501444.999997449,
+                1156304.9998443949
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2371.html'>Station page</a>",
+              "name": "Orbe - Le Chenit, Frontière (2371)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 172
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2160",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2573519.999999317,
+                1161344.99984497
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2160.html'>Station page</a>",
+              "name": "Sarine - Broc, Château d 'en bas (2160)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 173
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2490",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2488879.9999970724,
+                1119459.9998406381
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2490.html'>Station page</a>",
+              "name": "Allondon - Dardagny, Les Granges (2490)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 174
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2009",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2557659.999998892,
+                1133279.9998421054
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2009.html'>Station page</a>",
+              "name": "Rhône - Porte du Scex (2009)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 175
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "2203",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2563959.9999990556,
+                1129859.9998417592
+              ]
+            },
+            "properties": {
+              "description": "<a target='_blank' href='http://www.hydrodaten.admin.ch/en/2203.html'>Station page</a>",
+              "name": "Grande Eau - Aigle (2203)",
+              "param": "Discharge",
+              "w-typ": "River",
+              "ws-class": 1,
+              "_gx_style": 176
+            }
+          }
+        ]
+      },
+      "name": "ch.bafu.hydroweb-messstationen_gefahren"
+    }
+  ],
+  "legends": [],
+  "enableLegends": false,
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmf-geoadmin3.prod.bgdi.ch%2F%3Flang%3Den%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-grau%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%2Cch.bafu.hydrologie-wassertemperaturmessstationen%2Cch.bafu.hydroweb-messstationen_gefahren%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%2Cfalse%2Ctrue%26layers_timestamp%3D18641231%2C%2C%2C%2C%2C%26E%3D2623181.12%26N%3D1211222.56%26zoom%3D1",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2623250,
+        1211250
+      ],
+      "bbox": [
+        2481786.111111111,
+        1117763.8888888888,
+        2764713.888888889,
+        1304736.111111111
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "1000000.0",
+      "dataOwner": "© swisstopo, FOEN",
+      "shortLink": "https://s.geo.admin.ch/7979680390",
+      "rotation": 0,
+      "langen": true,
+      "timestamp": ""
+    }
+  ]
+}
