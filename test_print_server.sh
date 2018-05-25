@@ -4,6 +4,7 @@ _V=0
 
 DEFAULT_BASEURL=https://print.geo.admin.ch
 DEFAULT_TOMCAT_URL=http://localhost:8011
+DEFAULT_MAPFISH_LIBS=$HOME/mapfish-print/build/libs
 
 # DEFAULT_BASEURL=https://service-print.dev.bgdi.ch
 
@@ -22,6 +23,7 @@ HOST=${HOST:-${DEFAULT_HOST}}
 TOMCAT_URL=${TOMCAT_URL:-${DEFAULT_TOMCAT_URL}}
 
 MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
+MAPFISH_LIBS=${MAPFISH_LIBS:-${DEFAULT_MAPFISH_LIBS}}
 CURL_OPTS=""
 
 
@@ -124,7 +126,7 @@ function debug_print() {
 function local_print() {
     local specfile=$1
     
-    java -Djava.awt.headless=true  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+    java -Djava.awt.headless=true  -cp ${MAPFISH_LIBS}/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
     
