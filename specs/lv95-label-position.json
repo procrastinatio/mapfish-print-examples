@@ -1,0 +1,211 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "type": "Vector",
+      "styles": {
+        "0": {
+          "id": 0,
+          "rotation": 0,
+          "externalGraphic": "https://api3.geo.admin.ch/color/255,0,0/circle-24@2x.png",
+          "fillOpacity": 1,
+          "graphicWidth": 48,
+          "graphicHeight": 48.0,
+          "graphicXOffset": 0.0,
+          "graphicYOffset": 0.0,
+          "strokeOpacity": 0,
+          "label": "right top",
+          "labelAlign": "rt",
+          "fontColor": "#ff0000",
+          "fontFamily": "HELVETICA",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        "1": {
+          "id": 1,
+          "rotation": 0,
+          "externalGraphic": "https://api3.geo.admin.ch/color/255,0,0/circle-24@2x.png",
+          "fillOpacity": 1,
+          "graphicWidth": 48,
+          "graphicHeight": 48,
+          "graphicXOffset": 0.0,
+          "graphicYOffset": 0.0,
+          "strokeOpacity": 0,
+          "label": "left top",
+          "labelAlign": "lt",
+          "fontColor": "#ff0000",
+          "fontFamily": "HELVETICA",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        "2": {
+          "id": 2,
+          "rotation": 0,
+          "externalGraphic": "https://api3.geo.admin.ch/color/255,0,0/circle-24@2x.png",
+          "fillOpacity": 1,
+          "graphicWidth": 48,
+          "graphicHeight": 48,
+          "graphicXOffset": 0.0,
+          "graphicYOffset": 0.0,
+          "strokeOpacity": 0,
+          "label": "right bottom",
+          "labelAlign": "rb",
+          "fontColor": "#ff0000",
+          "fontFamily": "HELVETICA",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        "3": {
+          "id": 3,
+          "rotation": 0,
+          "externalGraphic": "https://api3.geo.admin.ch/color/255,0,0/circle-24@2x.png",
+          "fillOpacity": 1,
+          "graphicWidth": 48,
+          "graphicHeight": 48,
+          "graphicXOffset": 0.0,
+          "graphicYOffset": 0.0,
+          "strokeOpacity": 0,
+          "label": "left bottom",
+          "labelAlign": "lb",
+          "fontColor": "#ff0000",
+          "fontFamily": "HELVETICA",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        "4": {
+          "id": 4,
+          "rotation": 0,
+          "externalGraphic": "https://api3.geo.admin.ch/color/255,0,0/circle-24@2x.png",
+          "fillOpacity": 1,
+          "graphicWidth": 48,
+          "graphicHeight": 48.0,
+          "graphicXOffset": 0.0,
+          "graphicYOffset": 0.0,
+          "strokeOpacity": 0,
+          "label": "middle center",
+          "labelAlign": "cm",
+          "fontColor": "#ff0000",
+          "fontFamily": "HELVETICA",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        }
+      },
+      "styleProperty": "_gx_style",
+      "geoJson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "marker_1527595397637",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2580250.000550183,
+                1176450.0009874082,
+                0
+              ]
+            },
+            "properties": {
+              "_gx_style": 0
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "marker_1527595424098",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2591950.0005609957,
+                1176250.0009843763,
+                0
+              ]
+            },
+            "properties": {
+              "_gx_style": 1
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "marker_1527595433258",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2579850.000551963,
+                1167750.0009828054,
+                0
+              ]
+            },
+            "properties": {
+              "_gx_style": 2
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "marker_1527595446201",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2591400.000562838,
+                1166950.000979501,
+                0
+              ]
+            },
+            "properties": {
+              "_gx_style": 3
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "marker_1527595466987",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2585250.000555918,
+                1171950.0009837458,
+                0
+              ]
+            },
+            "properties": {
+              "_gx_style": 4
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "legends": [],
+  "enableLegends": false,
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3DvoidLayer%26layers_visibility%3Dfalse%26layers_timestamp%3D18641231%26E%3D2585769.69%26N%3D1172397.39%26zoom%3D4",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2585750,
+        1172400
+      ],
+      "bbox": [
+        2571603.611111111,
+        1163051.388888889,
+        2599896.388888889,
+        1181748.611111111
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "100000.0",
+      "dataOwner": " User local file",
+      "shortLink": "https://s.geo.admin.ch/7ad7263735",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}
