@@ -215,7 +215,7 @@ else
   init
 fi
 
-if $DEBUG; then
+if [ $DEBUG=1 ]; then
     CURL_OPTS=" -v "
 fi
 case "${action}" in
