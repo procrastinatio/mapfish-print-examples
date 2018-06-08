@@ -19,7 +19,7 @@
       ],
       "format": "image/png",
       "customParams": {
-        "EXCEPTIONS": "application/vnd.ogc.se_xml",
+        "EXCEPTIONS": "XML",
         "TRANSPARENT": "true",
         "VERSION": "1.3.0",
         "CRS": "EPSG:2056"
