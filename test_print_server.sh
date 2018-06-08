@@ -21,17 +21,17 @@ DEFAULT_HOST=$(echo ${BASEURL} | sed -e "s/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/
 HOST=${HOST:-${DEFAULT_HOST}}
 
 TOMCAT_URL=${TOMCAT_URL:-${DEFAULT_TOMCAT_URL}}
+YAML_CONFIG=$HOME/service-print/tomcat/config.yaml
 
 MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 MAPFISH_LIBS=${MAPFISH_LIBS:-${DEFAULT_MAPFISH_LIBS}}
 CURL_OPTS=""
+DEBUG=0
 
 
 PRINT=printmulti
 PRINT=print
 #PRINT=pdf  # for tomcat
-
-
 
 
 function log () {
@@ -51,17 +51,29 @@ function json_files {
 
 
 function usage(){
+    cat <<-EOF
 
-    echo "Testing a spec file against the mapfish print server"
-    echo
-    echo "test_print <local|tomcat|remote> <spec file>"
-    echo "BASEURL=${BASEURL}"
-    echo "HOST=${HOST}"
-    echo "MAPFISH_PRINT=${MAPFISH_PRINT}"
-    echo "PRINT=${PRINT}"
-    echo
-    echo "Possible spec files (in 'specs' directory):"
-    json_files
+    Testing a spec file against the mapfish print server
+    
+      test_print <local|tomcat|remote> <spec file>
+    
+        Print server url                            BASEURL=${BASEURL}
+        Default to ${DEFAULT_BASEURL}
+        Print host                                  HOST=${HOST}
+        Name of the standalone mapfish jar file     MAPFISH_PRINT=${MAPFISH_PRINT}
+        /print or /multiprint                       PRINT=${PRINT}
+        Path to dir where Mapfish Print v2 store
+        its war and jar build (local machine)       MAPFISH_LIBS=${MAPFISH_LIBS}
+        Print config (only used by local and
+        gradle print)                               YAML_CONFIG=${YAML_CONFIG}
+    
+    Example: test_print_server.sh remote lv95_simple
+    
+    Possible spec files (in 'specs' directory):
+    
+      ./test_print_server.sh list"
+
+EOF
 
 }
 
@@ -70,7 +82,6 @@ function usage(){
 
 urlencode() {
     # urlencode <string>
-
     local length="${#1}"
     for (( i = 0; i < length; i++ )); do
         local c="${1:i:1}"
@@ -86,7 +97,6 @@ function init() {
     local dir
     
     for dir in "pdfs/local" "pdfs/tomcat" "pdfs/remote" "pdfs/gradle" "pdfs/fixed" logs; do
-        #echo "${dir}"
         if [ ! -d "${dir}" ]; then
              mkdir -p "${dir}"
         fi
@@ -114,9 +124,12 @@ function print_spec() {
 }
 function debug_print() {
     local specfile=$1
-    
-    #java -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2 -Dhttps.protocols=TLSv1.1,TLSv1.2 -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -Ddeployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/debug/${specfile}.pdf | tee logs/${specfile}.log
-    java -Djava.awt.headless=true  -Djavax.net.debug=all  -cp $HOME/mapfish-print/build/libs/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/debug/${specfile}.pdf | tee logs/${specfile}.log
+    # For SSL issues
+    JAVA_OPTS=" -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2 -Dhttps.protocols=TLSv1.1,TLSv1.2 -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -Ddeployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true -Djava.awt.headless=true  -Djavax.net.debug=ssl:handshake:verbose"
+    # For general problems
+    JAVA_OPTS=" -Djavax.net.debug=all "
+
+    java ${JAVA_OPTS} -Djava.awt.headless=true   -cp ${MAPFISH_LIBS}/${MAPFISH_PRINT}   org.mapfish.print.ShellMapPrinter --config=${YAML_CONFIG} --spec=specs/${specfile}.json  --output=pdfs/debug/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
     
@@ -126,7 +139,7 @@ function debug_print() {
 function local_print() {
     local specfile=$1
     
-    java -Djava.awt.headless=true  -cp ${MAPFISH_LIBS}/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=$HOME/service-print/tomcat/config.yaml --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
+    java -Djava.awt.headless=true  -cp ${MAPFISH_LIBS}/${MAPFISH_PRINT}  org.mapfish.print.ShellMapPrinter --config=${YAML_CONFIG} --spec=specs/${specfile}.json  --output=pdfs/local/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
     
@@ -137,7 +150,7 @@ function gradle_print() {
     local specfile=$1
     
     cd ../mapfish-print
-     ./gradlew run  -Dconfig=$HOME/service-print/tomcat/config.yaml -Dspec=specs/${specfile}.json  -Doutput=pdfs/gradle/${specfile}.pdf | tee logs/${specfile}.log
+     ./gradlew run  -Dconfig=${YAML_CONFIG} -Dspec=specs/${specfile}.json  -Doutput=pdfs/gradle/${specfile}.pdf | tee logs/${specfile}.log
 
     print_return_code=$?
 
@@ -164,9 +177,25 @@ function remote_print() {
 
 }
 
+
+function check_yaml() {
+    if [ ! -f "$HOME/service-print/tomcat/config.yaml" ]; then
+        echo "No file $HOME/service-print/tomcat/config.yaml found"
+        echo "Please git clone git@github.com:geoadmin/service-print.git"
+        exit 2
+    fi
+
+    if [ ! -f "${MAPFISH_LIBS}/${MAPFISH_PRINT}" ]; then
+        echo "No file ${MAPFISH_LIBS}/${MAPFISH_PRINT} found!"
+        echo "Please install and compile git@github.com:geoadmin/mapfish-print.git"
+        exit 2
+    fi 
+}
+
 function preflight() {
     local action=$1
     local specfile=$2
+
     
     spec=$(print_spec ${specfile})
     log $spec
@@ -175,8 +204,9 @@ function preflight() {
 }
 
 
-
-if (( $# < 2 )); then
+if [ "$1" == "list" ]; then
+    action=$1
+elif (( $# < 2 )); then
     usage
     exit 1
 else
@@ -184,26 +214,33 @@ else
   specfile=$2
   init
 fi
+
 if $DEBUG; then
     CURL_OPTS=" -v "
 fi
 case "${action}" in
 
+list)
+    json_files
+    ;;
 
 local) echo "Doing a local print"
 
+    check_yaml
     preflight local ${specfile}
     local_print ${specfile}
     ;;
 
 gradle) echo "Doing a gradle print"
 
+    check_yaml
     preflight gradle ${specfile}
     gradle_print ${specfile}
     ;;
 
 debug) echo "Doing a debug print"
-
+    
+    check_yaml
     preflight debug ${specfile}
     debug_print ${specfile}
     ;;
@@ -277,10 +314,10 @@ remote) echo "Doing a remote print"
     echo ${json}   
     echo "#### $pdf_url ####"
 
-    sleep 0.5
+    sleep 2
     
-    pdf_file="pdfs/remote/${specfile}.${RANDOM}.pdf"
-    #pdf_file="pdfs/remote/${specfile}.pdf"
+    #pdf_file="pdfs/remote/${specfile}.${RANDOM}.pdf"
+    pdf_file="pdfs/remote/${specfile}.pdf"
    
     curl -s -o ${pdf_file} ${pdf_url}
     
@@ -288,8 +325,8 @@ remote) echo "Doing a remote print"
     echo
     echo $(file ${pdf_file})
     
-    echo $PRINT
-    rm -f ${pdf_file}
+    #echo $PRINT
+    #rm -f ${pdf_file}
     ;;
 
 fixed) echo "Doing a remote print on fixed"
