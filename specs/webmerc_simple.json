@@ -1,0 +1,96 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:3857",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+    {
+      "opacity": 1,
+      "layer": "ch.swisstopo.pixelkarte-farbe",
+      "type": "WMTS",
+      "version": "1.0.0",
+      "requestEncoding": "REST",
+      "formatSuffix": "jpeg",
+      "style": "default",
+      "dimensions": [
+        "TIME"
+      ],
+      "params": {
+        "TIME": "current"
+      },
+      "matrixSet": "3857",
+      "baseURL": "https://wmts100.geo.admin.ch",
+      "zoomOffset": 0,
+      "tileOrigin": [
+         -20037508.342789244,
+          20037508.342789244
+      ],
+      "tileSize": [
+        256,
+        256
+      ],
+      "resolutions": [
+           156543.03392804097,
+        78271.51696402048,
+        39135.75848201024,
+        19567.87924100512,
+        9783.93962050256,
+        4891.96981025128,
+        2445.98490512564,
+        1222.99245256282,
+        611.49622628141,
+        305.748113140705,
+        152.8740565703525,
+        76.43702828517625,
+        38.21851414258813,
+        19.109257071294063,
+        9.554628535647032,
+        4.777314267823516,
+        2.388657133911758,
+        1.194328566955879,
+        0.5971642834779395,
+        0.29858214173896974,
+        0.14929107086948487,
+        0.07464553543474244,
+        0.03732276771737122,
+        0.01866138385868561
+      ],
+      "maxExtent": [
+         -20037508.342789244,
+         -20037508.342789244,
+         20037508.342789244,
+         20037508.342789244
+      ]
+    }
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%26layers_timestamp%3D18641231%2C%2C%2C",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        830000,
+        5930000
+      ],
+      "bbox": [
+        820000,
+        5920000,
+        840000,
+        5940000
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "100000.0",
+      "dataOwner": " swisstopo",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://s.geo.admin.ch/6c1758db34",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}
