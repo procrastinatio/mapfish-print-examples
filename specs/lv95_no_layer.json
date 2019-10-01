@@ -1,0 +1,38 @@
+{
+  "layout": "1 A4 landscape",
+  "srs": "EPSG:2056",
+  "units": "m",
+  "rotation": 0,
+  "app": "config",
+  "lang": "fr",
+  "dpi": "150",
+  "layers": [
+  ],
+  "qrcodeurl": "https://api3.geo.admin.ch/qrcodegenerator?url=https%3A%2F%2Fmap.geo.admin.ch%2F%3Flang%3Dfr%26topic%3Dech%26bgLayer%3Dch.swisstopo.pixelkarte-farbe%26layers%3Dch.swisstopo.zeitreihen%2Cch.bfs.gebaeude_wohnungs_register%2Cch.bav.haltestellen-oev%2Cch.swisstopo.swisstlm3d-wanderwege%26layers_visibility%3Dfalse%2Cfalse%2Cfalse%2Cfalse%26layers_timestamp%3D18641231%2C%2C%2C",
+  "movie": false,
+  "pages": [
+    {
+      "center": [
+        2660000.0000000005,
+        1190000
+      ],
+      "bbox": [
+        2645853.6111111115,
+        1180651.388888889,
+        2674146.3888888895,
+        1199348.611111111
+      ],
+      "display": [
+        802,
+        530
+      ],
+      "scale": "100000.0",
+      "dataOwner": " swisstopo",
+      "thirdPartyDataOwner": false,
+      "shortLink": "https://s.geo.admin.ch/6c1758db34",
+      "rotation": 0,
+      "langfr": true,
+      "timestamp": ""
+    }
+  ]
+}
