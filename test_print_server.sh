@@ -12,7 +12,7 @@ DEFAULT_MAPFISH_LIBS=$HOME/mapfish-print/build/libs
 
 
 BASEURL_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
-
+DEFAULT_CURL_OPTS=""
 
 BASEURL=${BASEURL:-${DEFAULT_BASEURL}}
 
@@ -25,7 +25,7 @@ YAML_CONFIG=$HOME/service-print/tomcat/config.yaml
 
 MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 MAPFISH_LIBS=${MAPFISH_LIBS:-${DEFAULT_MAPFISH_LIBS}}
-CURL_OPTS=""
+CURL_OPTS=${CURL_OPTS:-${DEFAULT_CURL_OPTS}}
 DEBUG=0
 
 
@@ -60,8 +60,9 @@ function usage(){
         Print server url                            BASEURL=${BASEURL}
         Default to ${DEFAULT_BASEURL}
         Print host                                  HOST=${HOST}
+        Options for curl                            CURL_OPTS=${CURL_OPTS}
         Name of the standalone mapfish jar file     MAPFISH_PRINT=${MAPFISH_PRINT}
-        /print or /multiprint                       PRINT=${PRINT}
+        Single print or multiprint                  PRINT=${PRINT}
         Path to dir where Mapfish Print v2 store
         its war and jar build (local machine)       MAPFISH_LIBS=${MAPFISH_LIBS}
         Print config (only used by local and
@@ -165,11 +166,11 @@ function remote_print() {
     local json
     local fullpath_specfile="specs/${specfile}.json"
 
-
     #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
     time {
     json=$(curl ${CURL_OPTS} --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
-           --header "Referer: https://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server" --header "Host: ${HOST}" --data @specs/${specfile}.json \
+           --header "Referer: https://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server"  \
+           --header "Host: ${HOST}" --data @specs/${specfile}.json \
            -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
@@ -215,9 +216,6 @@ else
   init
 fi
 
-if [ $DEBUG=1 ]; then
-    CURL_OPTS=" -v "
-fi
 case "${action}" in
 
 list)
@@ -262,6 +260,8 @@ tomcat)
     ;;
 
 remote) echo "Doing a remote print"
+    
+    ts=$(date +%s%N)
 
     preflight remote ${specfile}
     fullpath_specfile="specs/${specfile}.json"
@@ -313,6 +313,11 @@ remote) echo "Doing a remote print"
     pdf_url=$(echo ${json} | jq -r '.getURL')
     echo ${json}   
     echo "#### $pdf_url ####"
+
+    elapsed=$(echo "scale=3; ($(date +%s%N) - $ts) / 1000000000.0" | bc)
+    echo "Generation: ${elapsed} ms"
+    
+
 
     sleep 2
     
