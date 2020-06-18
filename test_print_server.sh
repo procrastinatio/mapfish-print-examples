@@ -2,6 +2,8 @@
 
 _V=0
 
+ME=$(basename "$0")
+
 DEFAULT_BASEURL=https://print.geo.admin.ch
 DEFAULT_TOMCAT_URL=http://localhost:8011
 DEFAULT_MAPFISH_LIBS=$HOME/mapfish-print/build/libs
@@ -53,9 +55,36 @@ function json_files {
 function usage(){
     cat <<-EOF
 
-    Testing a spec file against the mapfish print server
+    Testing a spec file against the mapfish print v2 server
     
-      test_print <local|tomcat|remote> <spec file>
+    Synopsis:
+    
+      Printing with MapFish Print v2 is really only sending a specification file (found in then
+      *specs* directory, to the print server, via *HTTP POST* or using the local *.jar*file.
+      
+      The *remote*print
+      
+      Send the *spec*file to the print server via HTTP POST. The server may run either locally via
+      a *docker-compose up -d* or remotely on an *EC2*or *kubernetes* cluster.
+      
+      The basic worklflow to edit the *config.yaml* will be, in the *geoadmin/service-print* github project:
+      
+      *tomcat/config.yaml* && make printwar dockerbuild dockerrun
+      
+      and in this repository:
+      
+      export BASEURL=8009 && $(ME) remote lv95_simple
+      
+      The *local* print
+      
+      Invoke the ${MAPFISH_LIBS}/${MAPFISH_PRINT} java .jar directly. You must have a functionning
+      java insallation (an older one)
+    
+    
+    
+    Usage:
+    
+      ${ME} <local|tomcat|remote> <spec file>
     
         Print server url                            BASEURL=${BASEURL}
         Default to ${DEFAULT_BASEURL}
@@ -72,7 +101,7 @@ function usage(){
     
     Possible spec files (in 'specs' directory):
     
-      ./test_print_server.sh list"
+      ./test_print_server.sh list
 
 EOF
 
@@ -167,14 +196,12 @@ function remote_print() {
     local fullpath_specfile="specs/${specfile}.json"
 
     #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
-    time {
     json=$(curl ${CURL_OPTS} --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
            --header "Referer: https://map.geo.admin.ch" --header "User-Agent: Zorba is debugging the print server"  \
            --header "Host: ${HOST}" --data @specs/${specfile}.json \
            -X POST "${url}/create.json?url=$(urlencode ${url})")
     
     echo ${json}
-    }
 
 }
 
@@ -259,7 +286,7 @@ tomcat)
     echo "Saved to pdfs/tomcat/${specfile}.pdf"
     ;;
 
-remote) echo "Doing a remote print"
+remote) echo "Doing a remote print on ${BASEURL}"
     
     ts=$(date +%s%N)
 
