@@ -15,6 +15,7 @@ DEFAULT_MAPFISH_LIBS=$HOME/mapfish-print/build/libs
 
 BASEURL_FIXED=https://service-print.int.bgdi.ch/mom_cf_fix
 DEFAULT_CURL_OPTS=""
+DOWNLOAD_PDF=${DOWNLOAD_PDF:-1}
 
 BASEURL=${BASEURL:-${DEFAULT_BASEURL}}
 
@@ -28,12 +29,16 @@ YAML_CONFIG=$HOME/service-print/tomcat/config.yaml
 MAPFISH_PRINT=print-standalone-2.1.3-SNAPSHOT.jar
 MAPFISH_LIBS=${MAPFISH_LIBS:-${DEFAULT_MAPFISH_LIBS}}
 CURL_OPTS=${CURL_OPTS:-${DEFAULT_CURL_OPTS}}
-DEBUG=0
+DEBUG=${DEBUG:-0}
 
 
 PRINT=printmulti
 PRINT=print
 #PRINT=pdf  # for tomcat
+
+if [[ ${DEBUG} -eq 1 ]]; then
+    CURL_OPTS=" -v ${CURL_OPTS} "
+fi
 
 
 function log () {
@@ -62,7 +67,7 @@ function usage(){
       Printing with MapFish Print v2 is really only sending a specification file (found in then
       *specs* directory, to the print server, via *HTTP POST* or using the local *.jar*file.
       
-      The *remote*print
+      The *remote* print
       
       Send the *spec*file to the print server via HTTP POST. The server may run either locally via
       a *docker-compose up -d* or remotely on an *EC2*or *kubernetes* cluster.
@@ -75,33 +80,44 @@ function usage(){
       
       export BASEURL=8009 && $(ME) remote lv95_simple
       
-      The *local* print
+      The *local* print (*gradle* and *tomcat* are almost the same)
       
-      Invoke the ${MAPFISH_LIBS}/${MAPFISH_PRINT} java .jar directly. You must have a functionning
-      java insallation (an older one)
+      Invoke the ${MAPFISH_LIBS}/${MAPFISH_PRINT} java .jar directly (the **standalone** version of the .jar,
+      not the servlet one!). You must have a functionning java installation (an older one)
+      
+      Only useful when coding to the _mapfish-print_ java code!
     
     
     
     Usage:
     
-      ${ME} <local|tomcat|remote> <spec file>
+      ${ME} <local|gradle|tomcat|remote> <spec file>
     
-        Print server url                            BASEURL=${BASEURL}
-        Default to ${DEFAULT_BASEURL}
-        Print host                                  HOST=${HOST}
-        Options for curl                            CURL_OPTS=${CURL_OPTS}
-        Name of the standalone mapfish jar file     MAPFISH_PRINT=${MAPFISH_PRINT}
-        Single print or multiprint                  PRINT=${PRINT}
+      Option for <remote>
+        Print server url                              BASEURL=${BASEURL}
+                                                      (default to ${DEFAULT_BASEURL})
+        Print host                                    HOST=${HOST}
+        Options for curl                              CURL_OPTS=${CURL_OPTS}
+        Download the PDF (0/1)                        DOWNLOAD_PDF=${DOWNLOAD_PDF} 
+        Be verbose                                    DEBUG=${DEBUG}
+        Single print or multiprint (debug)            PRINT=${PRINT}
+        
+      Options for <local> and <gradle>
+        Name of the **standalone** mapfish jar file   MAPFISH_PRINT=${MAPFISH_PRINT}
         Path to dir where Mapfish Print v2 store
-        its war and jar build (local machine)       MAPFISH_LIBS=${MAPFISH_LIBS}
+        its war and jar build (local machine)         MAPFISH_LIBS=${MAPFISH_LIBS}
         Print config (only used by local and
-        gradle print)                               YAML_CONFIG=${YAML_CONFIG}
+        gradle print)                                 YAML_CONFIG=${YAML_CONFIG}
     
-    Example: test_print_server.sh remote lv95_simple
+    Examples:
     
-    Possible spec files (in 'specs' directory):
+      Using a printerver (docker)
+        
+           test_print_server.sh remote lv95_simple
     
-      ./test_print_server.sh list
+      Available spec files (in 'specs' directory), use the `lv95_` :
+    
+          ./test_print_server.sh list
 
 EOF
 
@@ -148,7 +164,7 @@ function print_spec() {
     if [ -f "specs/${specfile}.json" ]; then
         cat specs/${specfile}.json | jq '.'
     else
-        echo "Cannot find the spec file"
+        echo "Cannot find the spec file: ${specfile}"
         exit 4
     fi
 }
@@ -194,6 +210,8 @@ function remote_print() {
     local url=$2
     local json
     local fullpath_specfile="specs/${specfile}.json"
+    
+
 
     #json=$(curl -v --max-time 60  --silent --header "Content-Type:application/json; charset=UTF-8" --header "Referer: http://ouzo.geo.admin.ch" --data @specs/${specfile}.json -X POST "${BASEURL}/${PRINT}/create.json?url=$(urlencode ${BASEURL}/${PRINT})")
     json=$(curl ${CURL_OPTS} --max-time 60  --silent --header "Content-Type: application/json; charset=UTF-8" \
@@ -286,9 +304,9 @@ tomcat)
     echo "Saved to pdfs/tomcat/${specfile}.pdf"
     ;;
 
-remote) echo "Doing a remote print on ${BASEURL}"
+remote) echo "Printing ${specfile} to remote on ${BASEURL}"
     
-    ts=$(date +%s%N)
+    start=$(date +%s%N)
 
     preflight remote ${specfile}
     fullpath_specfile="specs/${specfile}.json"
@@ -297,19 +315,24 @@ remote) echo "Doing a remote print on ${BASEURL}"
         json_files
         exit 3
     fi
+    
+
      
     movie=$(cat specs/${specfile}.json  | jq '.movie')
     
     if [ "${movie}" == "true" ]; then
-       echo "Movie mode"
+       echo "Multiprint mode" | ts '[%Y-%m-%d %H:%M:%S]'
        PRINT=printmulti
     else
       PRINT=print
+      echo "Singleprint mode" | ts '[%Y-%m-%d %H:%M:%S]'
     fi
     # Multiprint
     if [ "${movie}" == "true" ]; then
      
         done="ongoing"
+        merged='0'
+        merging=${start}
      
         #{"idToCheck":"1711102228415808"}
       
@@ -325,9 +348,13 @@ remote) echo "Doing a remote print on ${BASEURL}"
         while [[ "${status}" != "done" ]]; 
            do sleep 5; 
            json=$(curl -s  "${BASEURL}/printprogress?id=$idToCheck")
-           echo $json
+           echo $json | ts '[%Y-%m-%d %H:%M:%S]'
            status=$(echo $json | jq -r '.status')
-           echo "waiting  $json $status" [[ "${status}" != "done" ]]  && echo not-equal || echo equal
+           merged=$(echo $json | jq -r '.merged')
+           total=$(echo $json | jq -r '.total')
+           # echo ${merged} ${total} ${merging}
+           # DEBUG echo "waiting  $json $status" [[ "${status}" != "done" ]]  && echo not-equal || echo equal
+            [[ "${merged}" != "${total}" ]] &&  merging=$(date +%s%N) 
         
        done
 
@@ -340,23 +367,40 @@ remote) echo "Doing a remote print on ${BASEURL}"
     pdf_url=$(echo ${json} | jq -r '.getURL')
     echo ${json}   
     echo "#### $pdf_url ####"
-
-    elapsed=$(echo "scale=3; ($(date +%s%N) - $ts) / 1000000000.0" | bc)
-    echo "Generation: ${elapsed} ms"
     
-
-
-    sleep 2
+    elapsed=$(echo "scale=3; ($(date +%s%N) - $start) / 1000000000.0" | bc)
     
-    #pdf_file="pdfs/remote/${specfile}.${RANDOM}.pdf"
-    pdf_file="pdfs/remote/${specfile}.pdf"
+    if [ "${movie}" == "true" ]; then
+    
+      merged=$(echo "scale=3; ($(date +%s%N) - $merging) / 1000000000.0" | bc)
+      echo "Generation: ${elapsed} (s) (merging: ${merged})" 
+    
+    else
+    
+    echo "Generation (s): ${elapsed}" | ts '[%Y-%m-%d %H:%M:%S]'
+    
+    
+    fi
+    
+ 
+
+    if [[ ${DOWNLOAD_PDF} -eq 1 ]]; then
+      sleep 2
+    
+      echo "Dowloading.."
+    
+      #pdf_file="pdfs/remote/${specfile}.${RANDOM}.pdf"
+      pdf_file="pdfs/remote/${specfile}.pdf"
    
-    curl -s -o ${pdf_file} ${pdf_url}
+      curl -s -o ${pdf_file} ${pdf_url}
     
-    echo "Dowloaded to: ${pdf_file}"
-    echo
-    echo $(file ${pdf_file})
-    
+      echo "Dowloaded to: ${pdf_file}"   | ts '[%Y-%m-%d %H:%M:%S]'
+      echo "Testing if file is a PDF: $(file ${pdf_file})"
+    else
+    echo "File not downloaded"  | ts '[%Y-%m-%d %H:%M:%S]'
+      
+    fi
+    echo "Done"
     #echo $PRINT
     #rm -f ${pdf_file}
     ;;
