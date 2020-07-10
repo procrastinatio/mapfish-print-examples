@@ -7,6 +7,7 @@ ME=$(basename "$0")
 DEFAULT_BASEURL=https://print.geo.admin.ch
 DEFAULT_TOMCAT_URL=http://localhost:8011
 DEFAULT_MAPFISH_LIBS=$HOME/mapfish-print/build/libs
+DEFAULT_OUTPUT=pdf
 
 # DEFAULT_BASEURL=https://service-print.dev.bgdi.ch
 
@@ -250,7 +251,8 @@ function preflight() {
 }
 
 
-if [ "$1" == "list" ]; then
+oneArgCmd=(list info)
+if [[ ${oneArgCmd[*]} =~ "$1"  ]]; then
     action=$1
 elif (( $# < 2 )); then
     usage
@@ -304,6 +306,12 @@ tomcat)
     echo "Saved to pdfs/tomcat/${specfile}.pdf"
     ;;
 
+info)
+  INFO_URL="${BASEURL}/print/info.json"
+  echo "Info=${INFO_URL}"
+  curl -s ${INFO_URL} | jq -r '.'
+  ;;
+
 remote) echo "Printing ${specfile} to remote on ${BASEURL}"
     
     start=$(date +%s%N)
@@ -319,6 +327,11 @@ remote) echo "Printing ${specfile} to remote on ${BASEURL}"
 
      
     movie=$(cat specs/${specfile}.json  | jq '.movie')
+    outputformat=$(cat specs/${specfile}.json  | jq -r '.outputFormat')
+
+    if [ "${outputformat}" == "null" ]; then
+      outputformat=${DEFAULT_OUTPUT}
+    fi
     
     if [ "${movie}" == "true" ]; then
        echo "Multiprint mode" | ts '[%Y-%m-%d %H:%M:%S]'
@@ -390,12 +403,12 @@ remote) echo "Printing ${specfile} to remote on ${BASEURL}"
       echo "Dowloading.."
     
       #pdf_file="pdfs/remote/${specfile}.${RANDOM}.pdf"
-      pdf_file="pdfs/remote/${specfile}.pdf"
+      pdf_file="pdfs/remote/${specfile}.${outputformat}"
    
       curl -s -o ${pdf_file} ${pdf_url}
     
       echo "Dowloaded to: ${pdf_file}"   | ts '[%Y-%m-%d %H:%M:%S]'
-      echo "Testing if file is a PDF: $(file ${pdf_file})"
+      echo "Testing if file is a ${outputformat}: $(file ${pdf_file})"
     else
     echo "File not downloaded"  | ts '[%Y-%m-%d %H:%M:%S]'
       
