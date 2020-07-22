@@ -62,4 +62,14 @@ PDF has been generated and downloded to
 ## PNG to JPEG or PNG
 
      convert  -background white  -alpha remove  -density 250  lv95_simple_a6_256dpi.pdf -quality 92 lv95_simple_a6_256dpi_density250.jpeg
+     
+     DIN A6 is 	105 × 148 mm	4.13 × 5.83 (inches)    à 256dpi  1057 x1492 px  à 300 dpi   1240x1759 px
+     
+     Pour Poscard Creator (1819x1311 px)
 
+
+     convert -units pixelspercentimeter -density 256  pdfs/remote/lv95_versoix_swissimage_a6_256dpi_rotated.pdf  -resize 124% pdfs/remote/lv95_versoix_swissimage_a6_256dpi_rotated_optimized.png
+     
+     convert -units pixelspercentimeter -density 256  pdfs/remote/lv95_habern_a6_snowsport_256dpi.pdf  -resize 124% pdfs/remote/lv95_habern_a6_snowsport_256dpi_optimized.png
+
+     
