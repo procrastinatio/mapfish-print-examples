@@ -57,3 +57,19 @@ PDF has been generated and downloded to
 `squash` example:
 
     https://map.geo.admin.ch/?lang=fr&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&X=190000.00&Y=660000.00&zoom=1&catalogNodes=457,532&layers_opacity=0.75,1,0.75,1,1,1,1,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,1,0.75,0.75,1,1,0.75&layers=ch.bafu.naqua-grundwasser_psm,ch.bafu.bundesinventare-amphibien_anhang4,ch.bafu.bundesinventare-amphibien,ch.bafu.bundesinventare-amphibien_wanderobjekte,ch.bafu.fischerei-aeschen_kernzonen,ch.bafu.fischerei-aeschen_laichplaetze,ch.bafu.fischerei-aeschen_larvenhabitate,ch.blw.klimaeignung-futterbau,ch.blw.klimaeignung-getreidebau,ch.blw.klimaeignung-kartoffeln,ch.blw.klimaeignung-koernermais,ch.blw.klimaeignung-kulturland,ch.blw.klimaeignung-spezialkulturen,ch.blw.klimaeignung-typ,ch.blw.klimaeignung-zwischenfruchtbau,ch.bafu.nabelstationen,ch.blw.niederschlagshaushalt,ch.bafu.laerm-bahnlaerm_tag,ch.bav.kataster-belasteter-standorte-oev,ch.bafu.schutzgebiete-biosphaerenreservate,ch.bafu.laerm-bahnlaerm_nacht,WMS%7C%7CNatur-%20und%20Landschaftsschutz%7C%7Chttp:%2F%2Fwms.geo.gl.ch%2FPublic%3F%7C%7CNatur-%20und%20Landschaftsschutz%7C%7C1.3.0,KML%7C%7Chttp:%2F%2Fopendata.utou.ch%2Furbanproto%2Fgeneva%2Fgeo%2Fkml%2FRoutes.kml
+
+
+## PNG to JPEG or PNG
+
+     convert  -background white  -alpha remove  -density 250  lv95_simple_a6_256dpi.pdf -quality 92 lv95_simple_a6_256dpi_density250.jpeg
+     
+     DIN A6 is 	105 × 148 mm	4.13 × 5.83 (inches)    à 256dpi  1057 x1492 px  à 300 dpi   1240x1759 px
+     
+     Pour Poscard Creator (1819x1311 px)
+
+
+     convert -units pixelspercentimeter -density 256  pdfs/remote/lv95_versoix_swissimage_a6_256dpi_rotated.pdf  -resize 124% pdfs/remote/lv95_versoix_swissimage_a6_256dpi_rotated_optimized.png
+     
+     convert -units pixelspercentimeter -density 256  pdfs/remote/lv95_habern_a6_snowsport_256dpi.pdf  -resize 124% pdfs/remote/lv95_habern_a6_snowsport_256dpi_optimized.png
+
+     
